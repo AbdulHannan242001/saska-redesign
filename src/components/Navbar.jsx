@@ -9,19 +9,19 @@ const Navbar = () => {
       <div className="max-w-[1600px] mx-auto flex flex-row items-center justify-between">
         <img src={logo} alt="" className="h-[90px] w-auto" />
         <div className="flex flex-row gap-10">
-          <Link>
+          <Link to="/">
             <p className="font-semibold text-xl">Home</p>
           </Link>
-          <Link>
+          {/* <Link to={"/about"}>
             <p className="font-semibold text-xl">About Us</p>
-          </Link>
-          <Link>
+          </Link> */}
+          <Link to={"/services"}>
             <p className="font-semibold text-xl">Services</p>
           </Link>
-          <Link>
+          <Link to={"/projects"}>
             <p className="font-semibold text-xl">Projects</p>
           </Link>
-          <Link>
+          <Link to={"/contact"}>
             <p className="font-semibold text-xl">Contact</p>
           </Link>
         </div>

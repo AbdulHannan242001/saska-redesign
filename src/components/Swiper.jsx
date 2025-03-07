@@ -39,8 +39,24 @@ const SwiperSlider = () => {
   ];
 
   return (
-    <main className="">
-      <section className="flex flex-row justify-between">
+    <main className="w-full">
+      <section className="flex flex-col justify-between">
+        <div className="flex flex-row items-center justify-between w-[600px] p-2">
+          <div className="flex flex-row gap-x-4 ml-auto">
+            <span
+              onClick={handlePrev}
+              className="font-mono text-lg flex justify-center items-center border border-neutral-500 text-neutral-400 rounded-full size-[36px] hover:border-primary-light hover:bg-primary-light hover:text-white transition-all duration-200 ease-linear cursor-pointer"
+            >
+              <MdArrowBack />
+            </span>
+            <span
+              onClick={handleNext}
+              className="font-mono text-lg flex justify-center items-center border border-neutral-500 text-neutral-400 rounded-full size-[36px] hover:border-primary-light hover:bg-primary-light hover:text-white transition-all duration-200 ease-linear cursor-pointer"
+            >
+              <MdArrowForward />
+            </span>
+          </div>
+        </div>
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Swiper
             modules={[Autoplay]}
@@ -50,16 +66,16 @@ const SwiperSlider = () => {
                 slidesPerView: 1,
               },
               640: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
-              1200: {
-                slidesPerView: 3,
+              1280: {
+                slidesPerView: 1,
               },
-              1300: {
-                slidesPerView: 4,
+              1600: {
+                slidesPerView: 1,
               },
             }}
             loop={true}
@@ -70,31 +86,14 @@ const SwiperSlider = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide>
-                <div className="w-full h-full relative cursor-grab border">
-                  <div className="w-[640px] min-h-[200px]">
+                <div className="w-fit h-full min-h-[200px] relative cursor-grab p-[30px] border-primary-light border-2 rounded-3xl">
+                  <div className="w-[540px] flex items-center justify-center">
                     <p className="text-2xl font-normal">{testimonial}</p>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-
-        <div className="flex flex-col items-center justify-between mb-6">
-          <div className="flex flex-col gap-x-6">
-            <span
-              onClick={handleNext}
-              className="font-mono text-lg flex justify-center items-center border border-neutral-300 text-neutral-300 rounded-full size-[40px] hover:bg-white hover:text-slate-800 transition-all duration-200 ease-linear cursor-pointer"
-            >
-              <MdArrowForward />
-            </span>
-            <span
-              onClick={handlePrev}
-              className="font-mono text-lg flex justify-center items-center border border-neutral-300 text-neutral-300 rounded-full size-[40px] hover:bg-white hover:text-slate-800 transition-all duration-200 ease-linear cursor-pointer"
-            >
-              <MdArrowBack />
-            </span>
-          </div>
         </div>
       </section>
     </main>

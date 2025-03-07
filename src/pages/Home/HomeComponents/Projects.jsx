@@ -44,7 +44,7 @@ const Projects = () => {
                 key={index}
                 d={d}
                 stroke="#6C15F0"
-                strokeWidth="2"
+                strokeWidth="0.5"
                 fill="none"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
