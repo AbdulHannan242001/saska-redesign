@@ -69,11 +69,11 @@ const Services = () => {
   return (
     <main className="w-full">
       <div className="max-w-[1600px] mx-auto relative h-full">
-        <div className="absolute inset-0 w-auto z-10 border">
+        <div className="absolute w-auto -z-10 right-0">
           <svg
             width="1198.6"
             height="1300"
-            viewBox="0 0 1145 722"
+            viewBox="0 0 1198.6 1300"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -81,7 +81,7 @@ const Services = () => {
               <motion.path
                 key={index}
                 d={d}
-                stroke="#6C15F0"
+                stroke="#2cacc8"
                 strokeWidth="0.5"
                 fill="none"
                 initial={{ pathLength: 0 }}
@@ -91,7 +91,7 @@ const Services = () => {
             ))}
           </svg>
         </div>
-        <div className="w-full flex flex-row flex-wrap justify-between items-center gap-[40px] h-full">
+        <div className="w-full flex flex-row flex-wrap justify-between items-center gap-[40px] h-full py-[60px]">
           {services.map((service, index) => (
             <Card
               title={service.title}

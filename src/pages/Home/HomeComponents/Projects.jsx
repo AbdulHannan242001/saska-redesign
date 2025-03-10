@@ -43,7 +43,7 @@ const Projects = () => {
               <motion.path
                 key={index}
                 d={d}
-                stroke="#6C15F0"
+                stroke="#2cacc8"
                 strokeWidth="0.5"
                 fill="none"
                 initial={{ pathLength: 0 }}

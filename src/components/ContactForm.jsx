@@ -1,19 +1,19 @@
 import React from "react";
-import contactBg from "../assets/svg/contact-bg.svg";
+import contactBg from "../assets/images/contact-bg.png";
 import ArrowButton from "./ArrowButton";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
-    <div className="min-h-[740px] w-full relative">
+    <div className="min-h-[740px] w-full relative shadow-[0px_12px_8px_5px_rgba(0,0,0,0.15)] h-fit ">
       <div className="absolute inset-0">
         <img src={contactBg} alt="" />
       </div>
       <div className="h-[80%] w-full absolute bottom-[50%] translate-y-[50%] ">
         <div className="h-full w-10/12 mx-auto flex justify-center gap-10">
           <div className="w-6/12 flex flex-col gap-[30px] text-white">
-            <p className="w-fit text-2xl font-bold p-3 bg-[#210A38]/70 rounded-xl">
+            <p className="w-fit text-2xl font-bold p-3 bg-white/20 backdrop-blur-2xl rounded-xl">
               {" "}
               Contact Us{" "}
             </p>
@@ -37,7 +37,7 @@ const ContactForm = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="border border-[#210A38] rounded-xl w-full p-3 bg-[#210A38]/50"
+                  className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
               <div>
@@ -48,7 +48,7 @@ const ContactForm = () => {
                   type="email"
                   name="name"
                   id="name"
-                  className="border border-[#210A38] rounded-xl w-full p-3 bg-[#210A38]/50"
+                  className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
               <div>
@@ -59,7 +59,7 @@ const ContactForm = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="border border-[#210A38] rounded-xl w-full p-3 bg-[#210A38]/50"
+                  className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
               <div>
@@ -70,7 +70,7 @@ const ContactForm = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="border border-[#210A38] rounded-xl w-full p-3 bg-[#210A38]/50"
+                  className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
               <div>
@@ -80,11 +80,11 @@ const ContactForm = () => {
                 <textarea
                   name="name"
                   id="name"
-                  className="border border-[#210A38] rounded-xl w-full p-3 bg-[#210A38]/50 min-h-[20vh]"
+                  className="border border-white/30 rounded-xl w-full p-3 bg-white/10 min-h-[20vh]"
                 />
               </div>
-              <button className="border border-[#210A38] rounded-xl w-full p-1 bg-[#210A38]/50 relative cursor-pointer">
-                <div className="size-[55px] rounded-lg flex items-center justify-center bg-[#210A38]/80">
+              <button className="border border-white/30 rounded-xl w-full p-1 bg-white/10 relative cursor-pointer">
+                <div className="size-[55px] rounded-lg flex items-center justify-center bg-primary">
                   <span>
                     <FaArrowRight size={38}  />
                   </span>

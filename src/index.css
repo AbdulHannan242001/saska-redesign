@@ -3,8 +3,9 @@
 
 @theme {
   --font-inter: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --color-primary: #6c15f0;
-  --color-primary-light: #975bf1;
+  --color-primary: #2cacc8;
+  --color-primary-light: #2cacc8;
+  --color-dark: #151516
 }
 
 :root {

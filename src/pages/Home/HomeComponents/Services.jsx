@@ -22,7 +22,7 @@ const Services = () => {
                   <p className="font-semibold text-xl text-primary">
                     UI/UX and Graphic Designing
                   </p>
-                  <p className="text-[16px] font-light">
+                  <p className="text-[16px] font-light leading-[1.2rem]">
                     Transform your ideas into visually stunning designs and
                     user-friendly interfaces that captivate and engage your
                     audience.
@@ -37,7 +37,7 @@ const Services = () => {
                   <p className="font-semibold text-xl text-primary">
                     Front-End Development
                   </p>
-                  <p className="text-[16px] font-light">
+                  <p className="text-[16px] font-light leading-[1.2rem]">
                     Bring your designs to life with responsive, fast, and modern
                     front-end development tailored for exceptional user
                     experiences.
@@ -52,7 +52,7 @@ const Services = () => {
                   <p className="font-semibold text-xl text-primary">
                     Back-End Development
                   </p>
-                  <p className="text-[16px] font-light">
+                  <p className="text-[16px] font-light leading-[1.2rem]">
                     Develop robust, scalable, and secure back-end systems that
                     ensure seamless functionality and high performance for your
                     applications.
@@ -67,7 +67,7 @@ const Services = () => {
                   <p className="font-semibold text-xl text-primary">
                     Custom Software Development
                   </p>
-                  <p className="text-[16px] font-light">
+                  <p className="text-[16px] font-light leading-[1.2rem]">
                     Get tailored software solutions built to address your unique
                     business needs and streamline your operations efficiently.
                   </p>

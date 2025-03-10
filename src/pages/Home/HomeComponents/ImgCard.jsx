@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const ImgCard = ({ image, name, designation }) => {
   return (
-    <main className="w-[265px] h-[330px] flex flex-col gap-[30px] bg-white shadow-2xl">
+    <main className="w-[265px] h-[330px] flex flex-col gap-[30px] text-white bg-dark shadow-2xl">
       <div className="h-[160px] w-full p-1">
         <img src={image} alt="" className="object-cover h-full w-full" />
       </div>

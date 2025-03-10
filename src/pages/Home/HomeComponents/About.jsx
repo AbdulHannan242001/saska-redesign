@@ -22,21 +22,21 @@ const About = () => {
       <div className="w-full flex flex-row justify-between items-center">
         <div className="relative px-[30px] w-fit">
           <img src={about} alt="" className="z-0" />
-          <div className="w-[200px] h-auto rounded-[13px] border-2 border-[#975BF1]/50 absolute top-[5%] left-0 bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg">
+          <div className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[5%] left-0 bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg">
             <img src={members} alt="" />
             <div>
               <p className="text-lg font-semibold leading-4">10+</p>
               <p className="text-sm font-light">Team Members</p>
             </div>
           </div>
-          <div className="w-[200px] h-auto rounded-[13px] border-2 border-[#975BF1]/50 absolute top-[10%] right-[-5%] bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg">
+          <div className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[10%] right-[-5%] bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg">
             <img src={award} alt="" />
             <div>
               <p className="text-lg font-semibold leading-4">5+</p>
               <p className="text-sm font-light">Awarded Projects</p>
             </div>
           </div>
-          <div className="w-[200px] h-auto rounded-[13px] border-2 border-[#975BF1]/50 absolute bottom-[20%] right-[2%] bg-white z-50 px-3 py-4 flex flex-col items-center gap-2 shadow-black/50 shadow-lg">
+          <div className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute bottom-[20%] right-[2%] bg-white z-50 px-3 py-4 flex flex-col items-center gap-2 shadow-black/50 shadow-lg">
             <p className="text-xs"> Our Happy Customer</p>
             <div className="flex flex-row gap-1 items-center">
               <div className="flex flex-row items-center">

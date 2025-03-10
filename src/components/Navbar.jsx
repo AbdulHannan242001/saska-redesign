@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <main className="w-full bg-white">
       <div className="max-w-[1600px] mx-auto flex flex-row items-center justify-between">
-        <img src={logo} alt="" className="h-[90px] w-auto" />
+        <img src={logo} alt="" className="h-[60px] w-auto" />
         <div className="flex flex-row gap-10">
           <Link to="/">
             <p className="font-semibold text-xl">Home</p>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import logo from "../assets/svg/logo.svg";
+import { TbArrowRight } from "react-icons/tb";
 
 const RevealFooter = () => {
   return (
@@ -33,27 +34,34 @@ const RevealFooter = () => {
               </div>
             </div>
             <div className="flex flex-col gap-[15px]">
-                <p className="font-semibold text-gray-500 uppercase">Pages</p>
-                <ul className="flex flex-col gap-[10px] list-disc">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
-                </ul>
+              <p className="font-semibold text-gray-500 uppercase">Pages</p>
+              <ul className="flex flex-col gap-[10px] list-disc">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li>Contact</li>
+              </ul>
             </div>
             <div className="flex flex-col gap-[15px]">
-                <p className="font-semibold text-gray-500 uppercase">Services</p>
-                <ul className="flex flex-col gap-[10px] list-disc">
-                    <li>UI/UX and Graphic Designing</li>
-                    <li>Front-End Development</li>
-                    <li>Back-End Development</li>
-                    <li>Custom Software Development</li>
-                </ul>
+              <p className="font-semibold text-gray-500 uppercase">Services</p>
+              <ul className="flex flex-col gap-[10px] list-disc">
+                <li>UI/UX and Graphic Designing</li>
+                <li>Front-End Development</li>
+                <li>Back-End Development</li>
+                <li>Custom Software Development</li>
+              </ul>
             </div>
             <div className="flex flex-col gap-[15px]">
-                <p className="font-semibold text-gray-500 uppercase">Newsletter</p>
-                <input type="email" className="bg-gray-200 p-3 rounded-full" />
+              <p className="font-semibold text-gray-500 uppercase">
+                Newsletter
+              </p>
+              <div className="flex flex-row gap-[15px] p-3 rounded-full bg-gray-200">
+                <input type="email" placeholder="Join our newsletter" />
+                <button className="bg-primary text-white p-1 rounded-full">
+                  <TbArrowRight size={22} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
