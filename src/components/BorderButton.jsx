@@ -13,12 +13,12 @@ const DrawOutlineButton = ({ children, ...rest }) => {
   return (
     <button
       {...rest}
-      className={`cursor-pointer text-sm group relative px-4 py-2 font-semibold text-white transition-colors duration-[400ms] hover:text-primary hover:scale-105 shadow-white hover:shadow-md hover:shadow-primary-light/50 delay-300 w-fit`}
+      className={`cursor-pointer md:text-lg group relative px-4 py-2 font-semibold text-white transition-colors duration-[400ms] hover:text-primary hover:scale-105 delay-100 w-fit`}
     >
       <span className="flex items-center">
         {children}{" "}
         <TbArrowRight
-          className={`text-sm ml-2 transition-all duration-100 group-hover:ml-4`}
+          className={`md:text-lg ml-2 transition-all duration-100 group-hover:ml-4`}
         />
       </span>
 

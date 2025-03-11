@@ -6,7 +6,7 @@ import ContactForm from "../../components/ContactForm";
 const Contact = () => {
   return (
     <main>
-      <div className="bg-dark w-full h-[90vh]">
+      <div className="bg-dark w-full h-[90vh] px-[20px]">
         <div className="h-[80vh] max-w-[1600px] mx-auto flex flex-row items-center justify-between text-white">
           <div className="w-4/12 flex flex-col gap-[25px]">
             <p className="font-bold text-5xl">
@@ -19,13 +19,13 @@ const Contact = () => {
             </p>
             <ArrowButton text={"Get Consultation"} />
           </div>
-          <div className="w-8/12 ">
+          <div className="w-8/12">
             <img src={contactBanner} alt="" />
           </div>
         </div>
       </div>
       <div className="max-w-[1600px] mx-auto relative">
-        <div className="mt-[-25vh] w-full">
+        <div className="mt-[-25vh] w-full px-[40px]">
           <ContactForm />
         </div>
       </div>

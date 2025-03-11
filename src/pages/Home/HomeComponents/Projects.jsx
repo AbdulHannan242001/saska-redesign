@@ -29,9 +29,9 @@ const Projects = () => {
   ];
 
   return (
-    <main className="w-full">
-      <div className="max-w-[1600px] mx-auto w-full flex flex-row justify-between items-center relative min-h-[722px]">
-        <div className="absolute right-0 top-0 h-full w-auto z-10">
+    <main className="w-full px-[20px] overflow-hidden">
+      <div className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row justify-between items-center relative min-h-[722px]">
+        <div className="absolute md:right-0 bottom-0 md:top-0 h-full w-auto z-10">
           <svg
             width="1145"
             height="722"
@@ -47,13 +47,13 @@ const Projects = () => {
                 strokeWidth="0.5"
                 fill="none"
                 initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
+                whileInView={{ pathLength: 1 }}
                 transition={{ duration: 2 + index * 0.5, ease: "easeInOut" }}
               />
             ))}
           </svg>
         </div>
-        <div className="w-6/12 flex flex-col gap-[60px]">
+        <div className="w-full md:w-6/12 flex flex-col gap-[30px] md:gap-[60px] z-50 pt-[30px] md:pt-[0px]">
           <div className="flex flex-col gap-[20px]">
             <p className="font-semibold text-2xl text-primary-light">
               Projects
@@ -71,7 +71,7 @@ const Projects = () => {
             <ArrowButton text={"Recent Projects"} />
           </div>
         </div>
-        <div className="w-6/12 z-50">
+        <div className="w-full md:w-6/12 z-50 pb-[30px] md:pb-0">
             <img src={laptop} alt="" />
         </div>
       </div>

@@ -9,11 +9,11 @@ const ChainedAvatar = ({ text, images }) => {
             key={index}
             src={src}
             alt={`Client ${index + 1}`}
-            className="w-[36px] h-[36px] border-[1px] border-white rounded-full"
+            className="w-[30px] md:w-[36px] h-[30px] md:h-[36px] border-[1px] border-white rounded-full"
           />
         ))}
       </div>
-      <span className="ml-4 text-lg">{text}</span>
+      <span className="ml-4 md:text-lg">{text}</span>
     </div>
   );
 };

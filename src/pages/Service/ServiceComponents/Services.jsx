@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import Card from "./Card";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const services = [
     {
       title: "UI/UX Design",
@@ -66,8 +69,30 @@ const Services = () => {
     "M194.111 1274.43C240.638 1161 365.749 1067.62 616.246 1019.81C938.06 958.398 1027.75 867.86 1015.26 752.61C1006.74 673.95 950.614 583.662 888.2 483.246C840.649 406.745 789.449 324.373 752.815 236.734C716.111 148.899 694.063 55.7912 704.974 -41.9517L705.428 -42.4166C694.368 55.3675 716.379 148.508 753.094 236.341C789.692 323.918 840.878 406.269 888.416 482.748C950.888 583.256 1007.06 673.628 1015.62 752.548C1028.15 868.216 938.407 959.027 616.321 1020.5C365.665 1068.34 240.701 1161.86 194.44 1275.44L194.111 1274.43Z",
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each card
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 100 }, // Start 100px below
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <main className="w-full">
+    <main className="w-full px-[20px]">
       <div className="max-w-[1600px] mx-auto relative h-full">
         <div className="absolute w-auto -z-10 right-0">
           <svg
@@ -91,15 +116,23 @@ const Services = () => {
             ))}
           </svg>
         </div>
-        <div className="w-full flex flex-row flex-wrap justify-between items-center gap-[40px] h-full py-[60px]">
+        <motion.div
+          ref={ref}
+          className="w-full flex flex-row flex-wrap justify-between items-center gap-[40px] h-full py-[60px]"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {services.map((service, index) => (
-            <Card
-              title={service.title}
-              media={service.media}
-              description={service.description}
-            />
+            <motion.div key={index} variants={cardVariants}>
+              <Card
+                title={service.title}
+                media={service.media}
+                description={service.description}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </main>
   );

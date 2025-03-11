@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ImgCard from "./ImgCard";
 import user1 from "../../../assets/images/user1.png";
 import user2 from "../../../assets/images/user2.png";
@@ -21,13 +22,13 @@ const Team = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-row items-center gap-[55px] mx-auto z-50">
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} className="flex flex-col md:flex-row items-center gap-[30px] mx-auto z-50">
           <ImgCard designation={'Front-End Developer'} image={user1} name={'Abdul Hannan'} />
           <ImgCard designation={'Back-End Developer'} image={user2} name={'Abdul Mannan'} />
           <ImgCard designation={'UI / UX Designer'} image={user3} name={'Abdul Rafay'} />
           <ImgCard designation={'Social Media Manager'} image={user4} name={'Munazzah Ali'} />
           <ImgCard designation={'Wordpress Developer'} image={user5} name={'Hermain Ali'} />
-        </div>
+        </motion.div>
       </div>
       <div className="absolute bottom-0 left-0 z-10 h-[120px] w-full bg-white"></div>
     </main>

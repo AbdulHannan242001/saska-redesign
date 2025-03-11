@@ -41,17 +41,17 @@ const SwiperSlider = () => {
   return (
     <main className="w-full">
       <section className="flex flex-col justify-between">
-        <div className="flex flex-row items-center justify-between w-[600px] p-2">
+        <div className="flex flex-row items-center justify-between md:w-[600px] p-2">
           <div className="flex flex-row gap-x-4 ml-auto">
             <span
               onClick={handlePrev}
-              className="font-mono text-lg flex justify-center items-center border border-neutral-500 text-neutral-400 rounded-full size-[36px] hover:border-primary-light hover:bg-primary-light hover:text-white transition-all duration-200 ease-linear cursor-pointer"
+              className="font-mono text-sm md:text-lg flex justify-center items-center border border-neutral-500 text-neutral-400 rounded-full size-[36px] hover:border-primary-light hover:bg-primary-light hover:text-white transition-all duration-200 ease-linear cursor-pointer"
             >
               <MdArrowBack />
             </span>
             <span
               onClick={handleNext}
-              className="font-mono text-lg flex justify-center items-center border border-neutral-500 text-neutral-400 rounded-full size-[36px] hover:border-primary-light hover:bg-primary-light hover:text-white transition-all duration-200 ease-linear cursor-pointer"
+              className="font-mono text-sm md:text-lg flex justify-center items-center border border-neutral-500 text-neutral-400 rounded-full size-[36px] hover:border-primary-light hover:bg-primary-light hover:text-white transition-all duration-200 ease-linear cursor-pointer"
             >
               <MdArrowForward />
             </span>
@@ -86,9 +86,9 @@ const SwiperSlider = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide>
-                <div className="w-fit h-full min-h-[200px] relative cursor-grab p-[30px] border-primary-light border-2 rounded-3xl">
-                  <div className="w-[540px] flex items-center justify-center">
-                    <p className="text-2xl font-normal">{testimonial}</p>
+                <div className="w-fit h-full min-h-[200px] relative cursor-grab p-[30px] border-primary-light border-2 rounded-3xl bg-white">
+                  <div className="w-full md:w-[540px] flex items-center justify-center">
+                    <p className="md:text-2xl font-normal">{testimonial}</p>
                   </div>
                 </div>
               </SwiperSlide>

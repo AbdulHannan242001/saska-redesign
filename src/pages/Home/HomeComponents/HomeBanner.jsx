@@ -29,23 +29,17 @@ const HomeBanner = () => {
   ];
 
   return (
-    <div className="relative w-full h-[80vh] flex items-center justify-center text-white">
-      {/* Background Image
-      <img
-        src={bannerHome}
-        alt="Home Banner"
-        className="absolute inset-0 w-full h-full object-cover"
-      /> */}
+    <div className="relative w-full min-h-[80vh] flex items-center justify-center text-white p-[20px]">
       <div className="absolute h-full w-full inset-0 bg-dark"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between">
-        <div className="flex flex-col gap-[20px] max-w-[640px]">
+        <div className="flex flex-col gap-[20px] w-full md:max-w-[640px]">
           <ChainedAvatar images={images} text={"100 + Client Reviews"} />
-          <p className="text-[64px] leading-[112.00000000000001%] font-light">
+          <p className=" text-[40px] md:text-[64px] leading-[112.00000000000001%] font-light">
             Great <span className="font-bold">Product</span> is <br></br>
             <span className="font-bold">built by great teams</span>
           </p>
-          <p className="font-extralight leading-[144%] text-[20px]">
+          <p className="font-extralight leading-[144%] text-[16px] md:text-[20px]">
             We bring together our design skills and strategic thinking to craft
             experiences your customers will never forget.
           </p>
@@ -58,7 +52,7 @@ const HomeBanner = () => {
             <ArrowButton text={"Lets Get Started"} />
           </div>
         </div>
-        <div className="flex flex-row items-center justify-between w-6/12">
+        <div className="hidden md:flex flex-row items-center justify-between w-6/12">
             <div className="w-[395px] h-auto rounded-[13px] overflow-hidden">
                 <img src={banner1} alt="" className="h-auto w-full items-center object-cover" />
             </div>

@@ -4,31 +4,31 @@ import process from "../../../assets/svg/process.svg";
 
 const Process = () => {
   return (
-    <main className="relative h-[1600px] w-full text-white">
+    <main className="relative h-full md:h-[200vh] w-full text-black md:text-white px-[20px]">
       <div className="absolute inset-0 h-full w-full -z-10">
-        <img src={serviceBg} alt="" />
+        <img src={serviceBg} alt="" className="w-full h-full object-cover md:block hidden" />
       </div>
       <div className="max-w-[1600px] mx-auto z-50 h-full">
-        <div className="h-full items-center flex flex-col justify-center gap-[60px]">
-          <div className="flex flex-row">
-            <div className="w-6/12 flex flex-col gap-[13px]">
-              <p className="font-semibold text-2xl">How We Work</p>
-              <p className="font-black text-[82px] leading-[100%]">
+        <div className="h-full items-center flex flex-col justify-center gap-[10px] md:gap-[60px]">
+          <div className="flex flex-col md:flex-row ">
+            <div className="w-full md:w-6/12 flex flex-col gap-[13px]">
+              <p className="font-semibold text-lg md:text-2xl pt-[20px]">How We Work</p>
+              <p className="font-black text-[60px] md:text-[82px] leading-[100%]">
                 Our Process <br />{" "}
-                <span className="text-[64px]">Work Flow</span>{" "}
+                <span className=" text-[40px] md:text-[64px]">Work Flow</span>{" "}
               </p>
-              <p className="text-lg font-semibold">
+              <p className="md:text-lg font-semibold">
                 At SASKA Solutions, we follow a structured and efficient process
                 to deliver high-quality digital solutions. Our workflow ensures
                 clarity, transparency, and collaboration at every stage. Here’s
                 a detailed breakdown of how we work:
               </p>
             </div>
-            <div className="w-6/12">
+            <div className="w-full md:w-6/12">
               <img src={process} alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 justify-between w-full gap-[30px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-between w-full gap-[30px]">
             
             <div className="flex flex-row gap-2">
               <div className="flex flex-col items-center">
