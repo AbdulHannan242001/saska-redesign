@@ -9,7 +9,7 @@ const Projects2 = () => {
 
   const { scrollYProgress } = useScroll({
     target: target,
-    offset: ["start end", "end center"],
+    offset: ["start end", "end start"],
   });
   const isInView = useInView(target, { once: false, amount: 0.5 });
 
@@ -29,7 +29,7 @@ const Projects2 = () => {
   return (
     <main className="w-full">
       <div ref={target} className="w-full h-[200vh]">
-        <div className="flex flex-col md:flex-row max-w-[1600px] mx-auto h-screen md:h-[90vh] sticky top-15 md:top-20">
+        <div className="flex flex-col md:flex-row h-screen md:h-[90vh] sticky top-15 md:top-20">
           <div className="w-full md:w-8/12 relative flex flex-col justify-between items-center overflow-hidden md:h-full h-[40vh]">
             <div className="absolute inset-0 h-full w-full">
               <img src={project2} alt="" className="h-full w-full" />

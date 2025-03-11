@@ -20,7 +20,7 @@ const Testimonials = () => {
           <img
             src={commaLeft}
             alt=""
-            className="absolute top-0 left-[calc(0%+50px)]"
+            className="absolute top-0 left-[calc(0%+50px)] animate-bounce"
           />
           <div className="w-full md:w-5/12">
             <Swiper />
@@ -32,7 +32,7 @@ const Testimonials = () => {
         <img
           src={commaRight}
           alt=""
-          className="absolute bottom-0 right-[calc(0%+80px)]"
+          className="absolute bottom-0 right-[calc(0%+80px)] animate-bounce"
         />
       </div>
     </main>

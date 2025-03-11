@@ -11,7 +11,7 @@ const Projects1 = () => {
 
   const { scrollYProgress } = useScroll({
     target: target,
-    offset: ["start end", "end center"],
+    offset: ["start end", "end start"],
   });
   const isInView = useInView(target, { once: false, amount: 0.5 });
 
@@ -31,7 +31,7 @@ const Projects1 = () => {
   return (
     <main className="w-full">
       <div ref={target} className="w-full h-[200vh]">
-        <div className="flex flex-col md:flex-row max-w-[1600px] mx-auto h-screen md:h-[90vh] sticky  top-15 md:top-20">
+        <div className="flex flex-col md:flex-row h-screen md:h-[90vh] sticky  top-15 md:top-20">
           <div className="w-full md:w-4/12 p-[10px] md:p-[30px] bg-dark shadow-inner flex flex-col justify-center relative overflow-hidden h-[40vh] md:h-full">
             <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary z-10"></div>
             <motion.span
