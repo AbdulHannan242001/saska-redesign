@@ -35,8 +35,8 @@ const Services = () => {
   };
 
   return (
-    <main className="w-full relative px-[20px]">
-      <div className="mx-auto max-w-[1600px] z-50 pt-[100px]">
+    <main className="w-full relative px-[20px] pt-[60px]">
+      <div className="mx-auto max-w-[1600px] z-50">
         <div className="w-full flex flex-col gap-[72px]">
           <p className="text-4xl font-light text-center">
             We provide All in-one <br />

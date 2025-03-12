@@ -19,7 +19,7 @@ const About = () => {
     "Summary Reports",
   ];
   return (
-    <main className="max-w-[1600px] mx-auto py-[30px] px-[20px]">
+    <main className="max-w-[1600px] mx-auto px-[20px] py-[60px]">
       <div className="w-full flex flex-col md:flex-row justify-between items-center">
         <div className="relative md:px-[30px] md:w-fit">
           <img src={about} alt="" className="z-0" />

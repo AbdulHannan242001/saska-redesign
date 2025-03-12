@@ -1,5 +1,11 @@
 import React, { useRef } from "react";
 import Card from "./Card";
+import graphic from "../../../assets/svg/graphic.svg"
+import frontend from "../../../assets/svg/frontend.svg"
+import software from "../../../assets/svg/software.svg"
+import web from "../../../assets/svg/web.svg"
+import automation from "../../../assets/svg/automation.svg"
+import wordpress from "../../../assets/svg/wordpress.svg"
 import { motion, useInView } from "framer-motion";
 
 const Services = () => {
@@ -9,39 +15,40 @@ const Services = () => {
   const services = [
     {
       title: "UI/UX Design",
-      media: "",
+      media: frontend,
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "We craft user experiences that are intuitive, engaging, and conversion-focused. Our design process is rooted in understanding user behavior, ensuring every click feels natural and every interaction adds value. Choose us for designs that elevate user satisfaction and drive results.",
     },
     {
       title: "Web Development",
-      media: "",
+      media: web,
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "We build responsive, high-performance websites using the latest technologies. From seamless navigation to optimized loading speeds, every line of code is crafted for maximum impact. Partner with us for web solutions that not only meet today's standards but are ready for tomorrow's demands.",
     },
+    
     {
-      title: "Software Development",
-      media: "",
+      title: "Graphics Design",
+      media: graphic,
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "We design compelling graphics that reflect your brand’s identity and capture attention. From logos to marketing materials, we ensure every design leaves a lasting impression—helping you stand out in a crowded market.",
     },
     {
       title: "Scripting & Automation",
-      media: "",
+      media: automation,
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "We automate your repetitive and time-consuming tasks, saving you valuable hours and reducing errors. Whether it’s data processing, system integration, or workflow automation, we design solutions that boost efficiency and let you focus on what truly matters.",
     },
     {
-      title: "Graphics Design",
-      media: "",
+      title: "Software Development",
+      media: software,
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "We develop scalable and tailored software solutions that solve real business challenges. Our approach ensures flexibility, efficiency, and growth potential—helping you stay ahead in a competitive market.",
     },
     {
       title: "Wordpress & Ecommerce",
-      media: "",
+      media: wordpress,
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "We create custom WordPress sites and e-commerce stores that are easy to manage and built to convert. From smooth navigation to secure checkouts, we focus on delivering seamless shopping experiences that drive sales and build trust.",
     },
   ];
 
@@ -118,7 +125,7 @@ const Services = () => {
         </div>
         <motion.div
           ref={ref}
-          className="w-full flex flex-row flex-wrap justify-between items-center gap-[40px] h-full py-[60px]"
+          className="w-full flex flex-row flex-wrap justify-between items-center gap-[40px] h-full pt-[60px]"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

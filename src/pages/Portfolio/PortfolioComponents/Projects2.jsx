@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion, useInView } from "framer-motion";
 import sqcommercial from "../../../assets/images/sqcommercial.png";
 import sqcommercial1 from "../../../assets/images/sqcommercial1.png";
 import project2 from "../../../assets/images/project2.jpg";
+import ArrowButton from "../../../components/ArrowButton";
 
 const Projects2 = () => {
   const target = useRef(null);
@@ -22,9 +23,9 @@ const Projects2 = () => {
     }),
   };
 
-  const x1 = useTransform(scrollYProgress, [0, 0.8], [400, 0]);
-  const x2 = useTransform(scrollYProgress, [0, 0.8], [-500, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [0, 1]);
+  const x1 = useTransform(scrollYProgress, [0, 0.8], [400, -100]);
+  const x2 = useTransform(scrollYProgress, [0, 0.8], [-500, 100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.7], [0.3, 1]);
 
   return (
     <main className="w-full">
@@ -65,7 +66,7 @@ const Projects2 = () => {
               />
             </motion.div>
           </div>
-          <div className="w-full md:w-4/12 p-[30px] bg-dark shadow-inner flex flex-col justify-center relative overflow-hidden md:h-full h-[60vh]">
+          <div className="w-full md:w-4/12 p-[10px] md:p-[30px] bg-dark shadow-inner flex flex-col justify-start md:justify-center relative overflow-hidden md:h-full h-[60vh]">
             <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary"></div>
             <motion.span
               className="text-primary text-sm md:text-lg font-black"
@@ -77,23 +78,44 @@ const Projects2 = () => {
               SQ COMMERCIALS
             </motion.span>
             <motion.p
-              className="text-base font-light text-white tracking-tighter pb-[20px]"
+              className="text-base font-light text-white tracking-tighter pb-[10px] md:pb-[20px]"
               variants={textVariant}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               custom={0.5}
             >
-              LOOK AT THIS IMAGE IT LOOKS GREAT !!! <br /> DOESN'T IT ?
+              Crafting a Professional Platform for Industry Excellence.
             </motion.p>
             <motion.p
-              className="md:text-xl text-gray-200 font-semibold max-w-lg tracking-tight"
+              className="text-sm md:text-lg text-gray-200 font-medium max-w-lg tracking-tight pb-[10px] md:pb-[25px]"
               variants={textVariant}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               custom={1}
             >
-              Well, that's why I chose it in the first place.
+              SQ Commercial reached out to elevate their brand with a clean and
+              professional website. They needed a platform that not only
+              showcased their civil infrastructure and telecom solutions but
+              also reflected their commitment to quality. We designed a modern,
+              user-friendly site that clearly communicates their services while
+              offering a smooth browsing experience. The result is a website
+              that builds trust and strengthens their professional image.
             </motion.p>
+            <motion.div
+              className=""
+              variants={textVariant}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={1.5}
+            >
+              <a
+                href="https://www.sqcommercial.co.uk"
+                target="_blank"
+                className="text-white hover:border-b-1 border-white transition-all duration-300 ease-in"
+              >
+                Visit Site
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>

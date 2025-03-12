@@ -5,18 +5,18 @@ import ArrowButton from "../../../components/ArrowButton";
 import BorderButton from "../../../components/BorderButton";
 const PortfolioBanner = () => {
   return (
-    <div className="relative w-full h-[80vh] flex items-center justify-center text-white px-[20px] overflow-hidden">
+    <div className="relative w-full h-screen flex items-center justify-center text-white px-[20px] overflow-hidden">
       <div className="absolute inset-0 bg-dark"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between h-full">
         <div className="flex flex-col gap-[15px] md:gap-[25px] w-full md:w-5/12">
-          <h1 className="text-2xl md:text-5xl font-bold">Innovate, Design, Deliver</h1>
+          <h1 className="text-2xl md:text-5xl font-bold text-primary">Innovate, Design, Deliver</h1>
           <p className="text-lg md:text-2xl">
             Empowering your business with tailored digital solutions. Together,
             we turn ideas into reality with state-of-the-art design and
             technology.
           </p>
-          <p className="text-sm md:text-xl font-light">
+          <p className="text-sm md:text-base font-light">
             Let’s embark on a journey to transform your vision into impactful
             results.
           </p>

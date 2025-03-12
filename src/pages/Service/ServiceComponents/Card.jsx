@@ -3,9 +3,9 @@ import ArrowButton from "../../../components/ArrowButton";
 
 const Card = ({ title, description, media }) => {
   return (
-    <main className="w-[450px] h-full min-h-[500px] rounded-2xl shadow-primary/10 shadow-2xl flex flex-col items-center py-[10px] justify-center gap-[54px] relative z-50 bg-dark text-white backdrop-blur-sm overflow-hidden">
-      <div className="absolute flex flex-col justify-center h-auto m-[10px] p-[30px]">
-        <div className="size-[72px] bg-[#E2E0E6] rounded-full mb-[30px]">
+    <main className=" md:w-[450px] h-full min-h-[500px] rounded-2xl shadow-primary/10 shadow-2xl flex flex-col py-[10px] justify-start gap-[54px] relative z-50 bg-dark text-white backdrop-blur-sm overflow-hidden">
+      <div className="h-full m-[10px] p-[10px] md:p-[30px]">
+        <div className="size-[72px] bg-[#E2E0E6] rounded-full mb-[30px] flex items-center justify-center text-primary">
           <img src={media} alt="" />
         </div>
         <div className="flex flex-col gap-[5px] mb-[30px]">

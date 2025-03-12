@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, useInView } from "framer-motion";
-import ListLink from "../../../assets/images/ListLink.png";
-import ListLink1 from "../../../assets/images/ListLink1.png";
-import ListLink2 from "../../../assets/images/ListLink2.png";
-import ListLink3 from "../../../assets/images/ListLink3.png";
-import project1 from "../../../assets/images/project1.jpg";
+import tsdash from "../../../assets/images/tsdash.png";
+import tsdash1 from "../../../assets/images/tsdash1.png";
+import tsdash2 from "../../../assets/images/tsdash2.png";
+import tsdash3 from "../../../assets/images/tsdash3.png";
+import project5 from "../../../assets/images/project5.jpg";
 
-const Projects1 = () => {
+const Projects5 = () => {
   const target = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -24,15 +24,15 @@ const Projects1 = () => {
     }),
   };
 
-  const y1 = useTransform(scrollYProgress, [0, 0.8], [400, 10]);
-  const y2 = useTransform(scrollYProgress, [0, 0.8], [-500, 100]);
+  const y1 = useTransform(scrollYProgress, [0, 0.5], [400, -20]);
+  const y2 = useTransform(scrollYProgress, [0, 0.5], [-500, 20]);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [0.3, 1]);
 
   return (
     <main className="w-full">
       <div ref={target} className="w-full h-[200vh]">
-        <div className="flex flex-col md:flex-row h-screen md:h-[90vh] sticky top-15 md:top-20">
-          <div className="w-full md:w-4/12 p-[10px] md:p-[30px] bg-dark shadow-inner flex flex-col justify-center relative overflow-hidden h-[50vh] md:h-full">
+        <div className="flex flex-col md:flex-row h-screen md:h-[90vh] sticky  top-15 md:top-20">
+          <div className="w-full md:w-4/12 p-[10px] md:p-[30px] bg-dark shadow-inner flex flex-col justify-start md:justify-center relative overflow-hidden h-[50vh] md:h-full">
             <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary z-10"></div>
             <motion.span
               className="text-primary text-sm md:text-lg font-black"
@@ -41,7 +41,7 @@ const Projects1 = () => {
               animate={isInView ? "visible" : "hidden"}
               custom={0.25}
             >
-              LIST LINK APP
+              TS ADMIN DASHBOARD
             </motion.span>
             <motion.p
               className="text-base font-light text-white tracking-tighter pb-[10px] md:pb-[20px]"
@@ -59,14 +59,14 @@ const Projects1 = () => {
               animate={isInView ? "visible" : "hidden"}
               custom={1}
             >
-              The idea for ListLink originated when a client approached us with
+              The idea for tsdash originated when a client approached us with
               a unique challenge—managing toy lists among friends to avoid
               gifting duplicates. While this was the initial need, the app also
               had to be flexible enough to handle a variety of similar
               scenarios. We developed a web app that allows users to create
               personalized spaces and lists, offering full control over who can
               view or edit them. Whether it’s managing gifts, organizing
-              parties, or tracking shared tasks, ListLink simplifies
+              parties, or tracking shared tasks, tsdash simplifies
               coordination with an intuitive and adaptable approach.
             </motion.p>
             <motion.div
@@ -77,7 +77,7 @@ const Projects1 = () => {
               custom={1.5}
             >
               <a
-                href="https://listlinkapp.com"
+                href="https://edndte.com"
                 target="_blank"
                 className="text-white hover:border-b-1 border-white transition-all duration-300 ease-in"
               >
@@ -85,23 +85,23 @@ const Projects1 = () => {
               </a>
             </motion.div>
           </div>
-          <div className="w-full md:w-8/12 relative flex flex-row justify-between items-center overflow-hidden h-[50vh] md:h-full">
+          <div className="w-full md:w-8/12 relative flex flex-col flex-wrap justify-between items-center overflow-hidden h-[50vh] md:h-full">
             <div className="absolute inset-0 h-full w-full">
-              <img src={project1} alt="" className="h-full w-full" />
+              <img src={project5} alt="" className="h-full w-full" />
             </div>
             <motion.div
               style={{
                 y: y2,
                 opacity: opacity,
               }}
-              className="h-[70%] w-fit"
+              className="h-[40%] w-fit"
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
               }}
             >
               <img
-                src={ListLink}
+                src={tsdash}
                 alt="Project 1"
                 className="h-full w-full object-cover"
               />
@@ -111,10 +111,10 @@ const Projects1 = () => {
                 y: y1,
                 opacity: opacity,
               }}
-              className="h-[70%] w-fit"
+              className="h-[40%] w-fit"
             >
               <img
-                src={ListLink1}
+                src={tsdash1}
                 alt="Project 1"
                 className="h-full w-full object-cover"
               />
@@ -124,10 +124,10 @@ const Projects1 = () => {
                 y: y2,
                 opacity: opacity,
               }}
-              className="h-[70%] w-fit md:block hidden"
+              className="h-[40%] w-fit md:block hidden"
             >
               <img
-                src={ListLink2}
+                src={tsdash2}
                 alt="Project 2"
                 className="h-full w-full object-cover"
               />
@@ -137,10 +137,10 @@ const Projects1 = () => {
                 y: y1,
                 opacity: opacity,
               }}
-              className="h-[70%] w-fit md:block hidden"
+              className="h-[40%] w-fit md:block hidden"
             >
               <img
-                src={ListLink3}
+                src={tsdash3}
                 alt="Project 3"
                 className="h-full w-full object-cover"
               />
@@ -152,4 +152,4 @@ const Projects1 = () => {
   );
 };
 
-export default Projects1;
+export default Projects5;

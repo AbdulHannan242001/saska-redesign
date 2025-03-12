@@ -3,7 +3,7 @@ import { TbArrowRight } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 const ArrowButton = ({ text }) => {
-  const [position, setPosition] = useState({ x: "50%", y: "-40%" }); 
+  const [position, setPosition] = useState({ x: "-10%", y: "-40%" }); 
   const divSize = 40; 
   const buttonRef = useRef(null);
 
@@ -21,7 +21,7 @@ const ArrowButton = ({ text }) => {
   };
 
   const handleMouseLeave = () => {
-    setPosition({ x: "50%", y: "-40%" });
+    setPosition({ x: "-10%", y: "-40%" });
   };
 
   return (
@@ -36,12 +36,12 @@ const ArrowButton = ({ text }) => {
         <TbArrowRight size={22} />
       </span>
       <motion.div
-        className="absolute size-12 bg-white rounded-full blur-xl"
+        className="absolute size-12 bg-white/60 rounded-full blur-xl"
         style={{
           left: position.x,
           top: position.y,
         }}
-        initial={{ left: "50%", top: "-40%" }}
+        initial={{ left: "-10%", top: "-40%" }}
         animate={{ left: position.x, top: position.y }}
         transition={{ type: "spring", stiffness: 150, damping: 20 }}
       />

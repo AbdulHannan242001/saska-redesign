@@ -9,7 +9,7 @@ import user5 from "../../../assets/images/user5.png";
 
 const Team = () => {
   return (
-    <main className="w-full relative bg-[#e2e0e6] pt-[70px]">
+    <main className="w-full relative bg-[#e2e0e6] pt-[60px]">
       <div className="flex flex-col gap-[55px] max-w-[1600px] mx-auto py-[30px]">
         <div className="flex flex-col gap-[10px] items-center justify-center">
           <p className="text-2xl font-medium text-primary">
