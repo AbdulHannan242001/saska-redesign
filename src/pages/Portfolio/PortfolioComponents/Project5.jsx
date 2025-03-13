@@ -50,7 +50,7 @@ const Projects5 = () => {
               animate={isInView ? "visible" : "hidden"}
               custom={0.5}
             >
-              Simplifying List Management with Smart Solutions.
+              Transforming Data into Actionable Insights for Educational Excellence.
             </motion.p>
             <motion.p
               className="text-sm md:text-lg text-gray-200 font-medium max-w-lg tracking-tight pb-[10px] md:pb-[25px]"
@@ -59,15 +59,17 @@ const Projects5 = () => {
               animate={isInView ? "visible" : "hidden"}
               custom={1}
             >
-              The idea for tsdash originated when a client approached us with
-              a unique challenge—managing toy lists among friends to avoid
-              gifting duplicates. While this was the initial need, the app also
-              had to be flexible enough to handle a variety of similar
-              scenarios. We developed a web app that allows users to create
-              personalized spaces and lists, offering full control over who can
-              view or edit them. Whether it’s managing gifts, organizing
-              parties, or tracking shared tasks, tsdash simplifies
-              coordination with an intuitive and adaptable approach.
+              We were tasked with revamping an existing PHP application that
+              managed human resources for an educational network, including
+              teachers, staff, and administrators across multiple institutions.
+              The original platform presented data in basic tables, making it
+              challenging to analyze. We introduced a modern UI featuring
+              interactive charts, graphs, and dynamic tables for intuitive data
+              visualization. Advanced filtering options—like date ranges,
+              usernames, and tags—were integrated to enable precise data
+              extraction. The result is a user-friendly dashboard that
+              simplifies data analysis and enhances decision-making for
+              efficient human resource management.
             </motion.p>
             <motion.div
               className=""

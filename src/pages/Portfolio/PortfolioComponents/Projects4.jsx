@@ -77,7 +77,7 @@ const Projects4 = () => {
               animate={isInView ? "visible" : "hidden"}
               custom={0.5}
             >
-              Building an Online Presence for Industry Leaders.
+              Empowering Businesses with Seamless Inventory Control.
             </motion.p>
 
             <motion.p
@@ -87,12 +87,15 @@ const Projects4 = () => {
               animate={isInView ? "visible" : "hidden"}
               custom={1}
             >
-              Bethmar Ltd. approached us to establish their first digital
-              footprint—showcasing their expertise in civil, power, and telecom
-              infrastructure. We developed a sleek single-page website that
-              highlights their core services with interactive elements and
-              smooth animations, ensuring a modern and trustworthy online
-              presence.
+              We developed a comprehensive Stock Inventory & Management System
+              to simplify and optimize inventory processes. The goal was to
+              create a platform that not only provides real-time stock updates
+              but also enhances decision-making through dynamic visual reports.
+              Integrated with a powerful POS system, it ensures smooth
+              transactions and automatic stock adjustments. The result is a
+              user-friendly, efficient system that strengthens inventory
+              control, streamlines operations, and empowers businesses to manage
+              stock with confidence.
             </motion.p>
 
             {/* <motion.div

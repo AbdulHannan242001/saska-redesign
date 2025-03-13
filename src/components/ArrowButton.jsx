@@ -27,7 +27,7 @@ const ArrowButton = ({ text }) => {
   return (
     <div
       ref={buttonRef}
-      className="w-fit cursor-pointer overflow-hidden bg-primary px-3 py-2 flex flex-row gap-2 text-white md:text-lg font-medium items-center relative z-10"
+      className="active:scale-95 w-fit cursor-pointer overflow-hidden bg-primary px-3 py-2 flex flex-row gap-2 text-white md:text-lg font-medium items-center relative z-10"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
