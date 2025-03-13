@@ -5,7 +5,7 @@ import Projects1 from './PortfolioComponents/Projects1'
 import Projects2 from './PortfolioComponents/Projects2'
 import Projects3 from './PortfolioComponents/Projects3'
 import Projects4 from './PortfolioComponents/Projects4'
-import Projects5 from './PortfolioComponents/Project5'
+import Projects5 from './PortfolioComponents/Projects5'
 
 
 const Portfolio = () => {

@@ -1,10 +1,10 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const ImgCard = ({ image, name, designation }) => {
   return (
-    <main className="w-[265px] h-[330px] flex flex-col gap-[30px] text-white bg-dark shadow-2xl">
+    <main className="w-[265px] h-[330px] flex flex-col gap-[30px] text-white bg-gradient-to-t from-gray-950  to-dark shadow-lg shadow-slate-500">
       <div className="h-[160px] w-full p-1">
         <img src={image} alt="" className="object-cover h-full w-full" />
       </div>

@@ -6,48 +6,54 @@ import { FaArrowRight } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
-    <div className="min-h-[150vh] md:min-h-[750px] w-full relative h-fit">
-      <div className="absolute inset-0 h-full rounded-3xl overflow-hidden shadow-[0px_4px_4px_2px_rgba(255,255,255,0.25)]">
-        <img src={contactBg} alt="" className="w-full h-full object-cover" />
+    <div className="w-full relative h-fit">
+      {/* Background Image Container */}
+      <div className="absolute inset-0 w-full h-full min-h-[400px] md:min-h-[600px] rounded-3xl overflow-hidden">
+        <img
+          src={contactBg}
+          alt="Contact Background"
+          className="w-full h-full object-cover object-center"
+        />
       </div>
-      <div className="h-[80%] w-full absolute bottom-[50%] translate-y-[50%]">
-        <div className="h-full w-10/12 mx-auto flex md:flex-row flex-col justify-center gap-10">
-          <div className="w-full md:w-6/12 flex flex-col gap-[10px] md:gap-[30px] text-white py-[10px]">
-            <p className="w-fit md:text-2xl font-bold p-3 bg-white/20 backdrop-blur-2xl rounded-xl">
-              {" "}
-              Contact Us{" "}
+
+      {/* Content Wrapper */}
+      <div className="relative z-10 h-full w-full flex flex-col justify-center">
+        <div className="w-11/12 md:w-10/12 mx-auto flex flex-col md:flex-row justify-center gap-10 py-[100px]">
+          {/* Left Section */}
+          <div className="w-full md:w-6/12 text-white flex flex-col gap-4 md:gap-6">
+            <p className="w-fit text-xl md:text-2xl font-bold p-3 bg-white/20 backdrop-blur-2xl rounded-xl">
+              Contact Us
             </p>
-            <p className="text-2xl md:text-5xl font-bold">
+            <p className="text-2xl md:text-5xl font-bold leading-tight">
               Connect With Your Next Great Hire Today!
             </p>
             <p className="text-sm md:text-xl font-light">
               Every project we undertake is a testament to our dedication and
-              expertise. From small startups to large enterprises, our solutions
-              are designed to inspire and deliver impactful results.
+              expertise.
             </p>
             <ArrowButton text={"Get Consultation"} />
           </div>
+
+          {/* Right Section (Form) */}
           <div className="w-full md:w-6/12 text-white">
-            <form action="" className="flex flex-col gap-3">
+            <form className="flex flex-col gap-3">
               <div>
                 <label htmlFor="name" className="text-[16px] px-2">
                   Your Name *
                 </label>
                 <input
                   type="text"
-                  name="name"
                   id="name"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
               <div>
-                <label htmlFor="eamil" className="text-[16px] px-2">
+                <label htmlFor="email" className="text-[16px] px-2">
                   Email *
                 </label>
                 <input
                   type="email"
-                  name="name"
-                  id="name"
+                  id="email"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -57,8 +63,7 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  id="company"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -68,8 +73,7 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  id="phone"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -78,16 +82,13 @@ const ContactForm = () => {
                   Project Details *
                 </label>
                 <textarea
-                  name="name"
-                  id="name"
+                  id="details"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10 min-h-[20vh]"
                 />
               </div>
               <button className="border border-white/30 rounded-xl w-full p-1 bg-white/10 relative cursor-pointer">
                 <div className="size-[55px] rounded-lg flex items-center justify-center bg-primary">
-                  <span>
-                    <FaArrowRight size={38} />
-                  </span>
+                  <FaArrowRight size={38} />
                 </div>
                 <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold text-2xl">
                   Submit

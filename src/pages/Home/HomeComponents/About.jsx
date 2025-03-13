@@ -25,8 +25,9 @@ const About = () => {
           <img src={about} alt="" className="z-0" />
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1}}
             transition={{duration: 0.3, ease: 'easeInOut'}}
+            viewport={{ once: true }}
             className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[5%] left-0 bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg"
           >
             <img src={members} alt="" />
@@ -39,6 +40,7 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{duration: 0.3, ease: 'easeInOut'}}
+            viewport={{ once: true }}
             className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[30%] md:top-[10%] right-[-5%] bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg"
           >
             <img src={award} alt="" />
@@ -51,6 +53,7 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{duration: 0.3, ease: 'easeInOut'}}
+            viewport={{ once: true }}
             className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute bottom-[20%] right-[2%] bg-white z-50 px-3 py-4 flex flex-col items-center gap-2 shadow-black/50 shadow-lg"
           >
             <p className="text-xs"> Our Happy Customer</p>

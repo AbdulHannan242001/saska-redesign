@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
-import ListLink from "../../../assets/images/ListLink.png"
+import ListLink from "../../../assets/images/ListLink.png";
 
 export const Projects = () => {
   return (

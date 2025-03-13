@@ -1,12 +1,11 @@
-import React from "react";
-import bannerPortfolio from "../../../assets/banner/bannerPortfolio.jpg";
+import React from "react"; 
 import portfolioBanner from "../../../assets/svg/portfolioBanner.svg";
-import ArrowButton from "../../../components/ArrowButton";
-import BorderButton from "../../../components/BorderButton";
+import ArrowButton from "../../../components/ArrowButton"; 
+
 const PortfolioBanner = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center text-white px-[20px] overflow-hidden">
-      <div className="absolute inset-0 bg-dark"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-dark to-zinc-950"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between h-full">
         <div className="flex flex-col gap-[15px] md:gap-[25px] w-full md:w-5/12">
@@ -22,7 +21,7 @@ const PortfolioBanner = () => {
           </p>
           <div className="flex flex-row flex-wrap gap-[10px] md:gap-[32px]">
             <ArrowButton text="Lets Get Started" />
-            <BorderButton text="Learn More" />
+            {/* <BorderButton text="Learn More" /> */}
           </div>
         </div>
         <div className="md:block hidden absolute top-[50%] -translate-y-1/2 right-0 rounded-full bg-primary shadow-2xl shadow-primary/20 size-[800px]"></div>

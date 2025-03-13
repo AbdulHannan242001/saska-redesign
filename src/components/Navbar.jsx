@@ -5,7 +5,7 @@ import phone from "../assets/svg/phone.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const location = useLocation(); // To detect the active route
+  const location = useLocation(); 
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <main className="w-full bg-white shadow-md shadow-primary/30 px-4 md:px-5 h-[60px]">
+    <main className="w-full bg-white px-4 md:px-5 h-[60px]">
       <div className="max-w-[1600px] mx-auto flex flex-row items-center justify-between py-1">
         
         {/* Logo */}

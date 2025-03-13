@@ -30,7 +30,7 @@ const HomeBanner = () => {
 
   return (
     <div className="relative w-full min-h-[80vh] flex items-center justify-center text-white p-[20px]">
-      <div className="absolute h-full w-full inset-0 bg-dark"></div>
+      <div className="absolute h-full w-full inset-0 bg-gradient-to-b from-dark to-zinc-950"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between">
         <div className="flex flex-col gap-[20px] w-full md:max-w-[640px]">

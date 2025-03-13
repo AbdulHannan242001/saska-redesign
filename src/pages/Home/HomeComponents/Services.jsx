@@ -48,6 +48,7 @@ const Services = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
+            viewport={{ once: true }}
           >
             <motion.div variants={cardVariants}>
               <Card icon={graphic}>
@@ -66,6 +67,7 @@ const Services = () => {
                 </div>
               </Card>
             </motion.div>
+
             <motion.div variants={cardVariants}>
               <Card icon={frontend}>
                 <div className="flex flex-col gap-[30px]">
@@ -83,6 +85,7 @@ const Services = () => {
                 </div>
               </Card>
             </motion.div>
+
             <motion.div variants={cardVariants}>
               <Card icon={backend}>
                 <div className="flex flex-col gap-[30px]">
@@ -100,6 +103,7 @@ const Services = () => {
                 </div>
               </Card>
             </motion.div>
+
             <motion.div variants={cardVariants}>
               <Card icon={software}>
                 <div className="flex flex-col gap-[30px]">
@@ -117,6 +121,7 @@ const Services = () => {
                 </div>
               </Card>
             </motion.div>
+
           </motion.div>
         </div>
       </div>

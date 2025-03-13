@@ -4,7 +4,7 @@ import service from "../../../assets/svg/service.svg";
 const ServiceBanner = () => {
   return (
     <div className="relative w-full h-auto md:h-[70vh] flex items-center justify-center text-white px-[20px]">
-      <div className="absolute inset-0 bg-dark h-full w-full"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-dark to-zinc-950 h-full w-full"></div>
       <div className="relative z-10 w-full h-full max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between md:py-0 py-[30px]">
         <div className="flex flex-col gap-[0px] md:gap-[25px] w-fit md:max-w-[656px]">
           <p className="md:text-xl text-primary">Great Team, Great Products</p>

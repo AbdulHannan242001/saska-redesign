@@ -31,9 +31,9 @@ const Projects1 = () => {
   return (
     <main className="w-full">
       <div ref={target} className="w-full h-[200vh]">
-        <div className="flex flex-col md:flex-row h-screen md:h-[90vh] sticky top-15 md:top-20">
-          <div className="w-full md:w-4/12 p-[10px] md:p-[30px] bg-dark shadow-inner flex flex-col justify-center relative overflow-hidden h-[50vh] md:h-full">
-            <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary z-10"></div>
+        <div className="flex flex-col md:flex-row h-screen md:h-[calc(100vh-60px)] sticky top-15 md:top-15">
+          <div className="w-full md:w-4/12 p-[10px] md:p-[30px] bg-gradient-to-b from-dark to-zinc-950 flex flex-col justify-center relative overflow-hidden h-[50vh] md:h-full">
+            {/* <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary z-10"></div> */}
             <motion.span
               className="text-primary text-sm md:text-lg font-black"
               variants={textVariant}
@@ -53,7 +53,7 @@ const Projects1 = () => {
               Simplifying List Management with Smart Solutions.
             </motion.p>
             <motion.p
-              className="text-sm md:text-lg text-gray-200 font-medium max-w-lg tracking-tight pb-[10px] md:pb-[25px]"
+              className="text-sm md:text-lg text-gray-200  font-medium max-w-lg tracking-tight pb-[10px] md:pb-[25px]"
               variants={textVariant}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}

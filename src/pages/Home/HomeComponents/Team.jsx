@@ -22,7 +22,7 @@ const Team = () => {
             </p>
           </div>
         </div>
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} className="flex flex-col md:flex-row items-center gap-[30px] mx-auto z-50">
+        <motion.div viewport={{ once: true }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} className="flex flex-col md:flex-row items-center gap-[30px] mx-auto z-50">
           <ImgCard designation={'Front-End Developer'} image={user1} name={'Abdul Hannan'} />
           <ImgCard designation={'Back-End Developer'} image={user2} name={'Abdul Mannan'} />
           <ImgCard designation={'UI / UX Designer'} image={user3} name={'Abdul Rafay'} />

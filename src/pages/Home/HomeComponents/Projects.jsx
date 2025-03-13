@@ -48,7 +48,8 @@ const Projects = () => {
                 fill="none"
                 initial={{ pathLength: 0 }}
                 whileInView={{ pathLength: 1 }}
-                transition={{ duration: 2 + index * 0.5, ease: "easeInOut" }}
+                transition={{ duration: 1 + index * 0.5, ease: "easeInOut" }}
+                viewport={{ once: true }}
               />
             ))}
           </svg>

@@ -6,7 +6,7 @@ import ContactForm from "../../components/ContactForm";
 const Contact = () => {
   return (
     <main>
-      <div className="bg-dark w-full h-[90vh] px-[20px]">
+      <div className="bg-gradient-to-b from-dark to-zinc-950 w-full h-[90vh] px-[20px]">
         <div className="h-[80vh] max-w-[1600px] mx-auto flex flex-row items-center justify-between text-white">
           <div className="w-4/12 flex flex-col gap-[25px]">
             <p className="font-bold text-5xl">
