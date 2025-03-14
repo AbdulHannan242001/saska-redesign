@@ -31,6 +31,8 @@ const HomeBanner = () => {
   return (
     <div className="relative w-full min-h-[80vh] flex items-center justify-center text-white p-[20px]">
       <div className="absolute h-full w-full inset-0 bg-gradient-to-b from-dark to-zinc-950"></div>
+      <div className="absolute size-[300px] right-[40%] top-[20%] blur-3xl bg-[#5e55ec]/50 rounded-full"></div>
+      <div className="absolute size-[250px] right-[5%] top-[60%] blur-3xl bg-primary/40 rounded-full"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between">
         <div className="flex flex-col gap-[20px] w-full md:max-w-[640px]">

@@ -47,7 +47,7 @@ const Layout = () => {
   }, [location.pathname]);
 
   return (
-    <div>
+    <div className="bg-zinc-950">
       <div className="sticky top-0 z-[999]">
         <Navbar />
       </div>

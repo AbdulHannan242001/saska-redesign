@@ -28,7 +28,7 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1}}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             viewport={{ once: true }}
-            className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[5%] left-0 bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg"
+            className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[5%] left-0 bg-dark text-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg"
           >
             <img src={members} alt="" />
             <div>
@@ -41,7 +41,7 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             viewport={{ once: true }}
-            className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[30%] md:top-[10%] right-[-5%] bg-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg"
+            className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute top-[30%] md:top-[10%] right-[-5%] bg-dark text-white z-50 px-3 py-4 flex flex-row items-center gap-2 shadow-black/50 shadow-lg"
           >
             <img src={award} alt="" />
             <div>
@@ -54,7 +54,7 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             viewport={{ once: true }}
-            className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute bottom-[20%] right-[2%] bg-white z-50 px-3 py-4 flex flex-col items-center gap-2 shadow-black/50 shadow-lg"
+            className="w-[200px] h-auto rounded-[13px] border-2 border-primary/50 absolute bottom-[20%] right-[2%] bg-dark text-white z-50 px-3 py-4 flex flex-col items-center gap-2 shadow-black/50 shadow-lg"
           >
             <p className="text-xs"> Our Happy Customer</p>
             <div className="flex flex-row gap-1 items-center">
@@ -71,10 +71,10 @@ const About = () => {
             <p className="font-semibold text-2xl text-primary-light">
               About Us
             </p>
-            <p className="font-bold text-3xl">
+            <p className="font-bold text-3xl text-white">
               We have over 3+ years in the Tech Industry
             </p>
-            <p className="text-lg font-light">
+            <p className="text-lg font-light text-white">
               Our journey in the tech industry has been about delivering
               innovative solutions and empowering businesses to achieve their
               goals. With a dedicated team of certified professionals, we are
@@ -88,7 +88,7 @@ const About = () => {
                 <span className="size-[30px] flex items-center justify-center rounded-full bg-primary-light text-white">
                   <TbArrowRight size={22} />
                 </span>
-                <p className="text-xl text-black font-semibold uppercase">
+                <p className="text-xl font-semibold uppercase text-white">
                   {text}
                 </p>
               </div>

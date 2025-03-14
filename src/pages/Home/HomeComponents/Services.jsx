@@ -35,8 +35,8 @@ const Services = () => {
   };
 
   return (
-    <main className="w-full relative px-[20px] pt-[60px]">
-      <div className="mx-auto max-w-[1600px] z-50">
+    <main className="w-full relative px-[20px] pt-[60px] text-white">
+      <div className="mx-auto max-w-[1600px]">
         <div className="w-full flex flex-col gap-[72px]">
           <p className="text-4xl font-light text-center">
             We provide All in-one <br />
@@ -44,7 +44,7 @@ const Services = () => {
           </p>
           <motion.div
             ref={ref}
-            className="flex flex-col md:flex-row gap-[56px] items-center mx-auto mt-[33px]"
+            className="flex flex-col md:flex-row gap-[56px] items-center mx-auto mt-[33px]  z-50"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -125,7 +125,7 @@ const Services = () => {
           </motion.div>
         </div>
       </div>
-      <div className="absolute -z-10 h-[150px] w-full bg-[#E2E0E6] bottom-0 left-0"></div>
+      <div className="absolute z-10 h-[150px] w-full bg-dark bottom-0 left-0"></div>
     </main>
   );
 };

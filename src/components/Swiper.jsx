@@ -86,7 +86,7 @@ const SwiperSlider = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide>
-                <div className="w-fit h-full min-h-[200px] relative cursor-grab p-[30px] border-primary-light border-2 rounded-3xl bg-white">
+                <div className="w-fit h-full min-h-[200px] relative cursor-grab p-[30px] border-primary-light border-2 rounded-3xl bg-dark">
                   <div className="w-full md:w-[540px] flex items-center justify-center">
                     <p className="md:text-2xl font-normal">{testimonial}</p>
                   </div>

@@ -6,7 +6,7 @@ import Swiper from "../../../components/Swiper";
 
 const Testimonials = () => {
   return (
-    <main className="w-full px-[20px] py-[60px]">
+    <main className="text-white w-full px-[20px] py-[60px]">
       <div className="mx-auto max-w-[1600px] relative py-[20px] md:py-[50px] h-full md:min-h-[650px]">
         <div className="flex flex-col gap-[10px] items-center justify-center">
           <p className="text-2xl font-medium text-primary">Cleints Feedback</p>
