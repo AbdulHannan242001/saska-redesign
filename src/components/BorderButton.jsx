@@ -1,10 +1,10 @@
 import React from "react";
 import { TbArrowRight } from "react-icons/tb";
 
-const BorderButton = ({ text }) => {
+const BorderButton = ({ text, onClick }) => {
   return (
     <div className="">
-      <DrawOutlineButton>{text}</DrawOutlineButton>
+      <DrawOutlineButton onClick={onClick}>{text}</DrawOutlineButton>
     </div>
   );
 };

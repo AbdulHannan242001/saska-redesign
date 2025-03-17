@@ -6,10 +6,12 @@ import graphic from "../../../assets/svg/graphic.svg";
 import frontend from "../../../assets/svg/frontend.svg";
 import software from "../../../assets/svg/software.svg";
 import backend from "../../../assets/svg/backend.svg";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" }); // Trigger when 100px before viewport
+  const navigate = useNavigate();
 
   // Animation variants
   const containerVariants = {
@@ -63,7 +65,7 @@ const Services = () => {
                       audience.
                     </p>
                   </div>
-                  <BorderButton text={"Learn More"} />
+                  <BorderButton onClick={() => {navigate('/services')}} text={"Learn More"} />
                 </div>
               </Card>
             </motion.div>
@@ -81,7 +83,7 @@ const Services = () => {
                       experiences.
                     </p>
                   </div>
-                  <BorderButton text={"Learn More"} />
+                  <BorderButton onClick={() => {navigate('/services')}} text={"Learn More"} />
                 </div>
               </Card>
             </motion.div>
@@ -99,7 +101,7 @@ const Services = () => {
                       your applications.
                     </p>
                   </div>
-                  <BorderButton text={"Learn More"} />
+                  <BorderButton onClick={() => {navigate('/services')}} text={"Learn More"} />
                 </div>
               </Card>
             </motion.div>
@@ -117,7 +119,7 @@ const Services = () => {
                       efficiently.
                     </p>
                   </div>
-                  <BorderButton text={"Learn More"} />
+                  <BorderButton onClick={() => {navigate('/services')}} text={"Learn More"} />
                 </div>
               </Card>
             </motion.div>

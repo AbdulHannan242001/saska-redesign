@@ -1,10 +1,11 @@
 import React from "react";
 import contactBg from "../assets/images/contact-bg.png";
 import ArrowButton from "./ArrowButton";
-import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full relative h-fit">
       {/* Background Image Container */}
@@ -31,7 +32,7 @@ const ContactForm = () => {
               Every project we undertake is a testament to our dedication and
               expertise.
             </p>
-            <ArrowButton text={"Get Consultation"} />
+            <ArrowButton onClick={() => {navigate("/contact")}} text={"Get Consultation"} />
           </div>
 
           {/* Right Section (Form) */}

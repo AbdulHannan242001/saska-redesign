@@ -1,7 +1,9 @@
 import React from "react";
 import ArrowButton from "../../../components/ArrowButton";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ title, description, media }) => {
+  const navigate = useNavigate();
   return (
     <main className=" md:w-[450px] h-full min-h-[500px] rounded-2xl flex flex-col py-[10px] justify-start gap-[54px] relative z-50 bg-gradient-to-tl to-dark from-primary/10 text-white backdrop-blur-sm overflow-hidden">
       <div className="h-full m-[10px] p-[10px] md:p-[30px]">
@@ -12,7 +14,7 @@ const Card = ({ title, description, media }) => {
           <h1 className="font-black text-4xl">{title}</h1>
           <p className="h-[20vh]">{description}</p>
         </div>
-        <ArrowButton text="Get Consultation" />
+        <ArrowButton onClick={() => {navigate("/contact")}} text="Get Consultation" />
       </div>
     </main>
   );

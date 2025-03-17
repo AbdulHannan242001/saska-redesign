@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { TbArrowRight } from "react-icons/tb";
 import { motion } from "framer-motion";
 
-const ArrowButton = ({ text }) => {
+const ArrowButton = ({ text, onClick }) => {
   const [position, setPosition] = useState({ x: "-10%", y: "-40%" }); 
   const divSize = 40; 
   const buttonRef = useRef(null);
@@ -30,6 +30,7 @@ const ArrowButton = ({ text }) => {
       className="active:scale-95 w-fit cursor-pointer overflow-hidden bg-primary px-3 py-2 flex flex-row gap-2 text-white md:text-lg font-medium items-center relative z-10 rounded"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       <p className="z-10">{text}</p>
       <span>

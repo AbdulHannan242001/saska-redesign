@@ -51,7 +51,7 @@ const HomeBanner = () => {
             ))}
           </div>
           <div className="pt-[10px]">
-            <ArrowButton text={"Lets Get Started"} />
+            <ArrowButton onClick={() => window.scrollTo(0, 700)} text={"Lets Get Started"} />
           </div>
         </div>
         <div className="hidden md:flex flex-row items-center justify-between w-6/12">

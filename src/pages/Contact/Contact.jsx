@@ -17,7 +17,6 @@ const Contact = () => {
               expert advice, or just want to say hello, our team is ready to
               help. Let’s collaborate and create something impactful.
             </p>
-            <ArrowButton text={"Get Consultation"} />
           </div>
           <div className="w-8/12">
             <img src={contactBanner} alt="" />
