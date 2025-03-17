@@ -34,8 +34,8 @@ const SwiperSlider = () => {
 
   const testimonials = [
     "Best IT solution provider in current market. Provide detail and comprehensive system as per user requirements. Well managed and integrated interface to seamless data migration.",
-    "Best IT solution provider in current market. Provide detail and comprehensive system as per user requirements. Well managed and integrated interface to seamless data migration.",
-    "Best IT solution provider in current market. Provide detail and comprehensive system as per user requirements. Well managed and integrated interface to seamless data migration.",
+    "Our collaboration with SASKA Solutions for web development was seamless. They built a high-performance, user-friendly website that perfectly met our business needs.",
+    "Thanks to SASKA Solutions' expertise in UI/UX design, our digital platform is now more user-friendly and engaging. This has significantly enhanced customer satisfaction and retention.",
   ];
 
   return (
