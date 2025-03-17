@@ -21,11 +21,10 @@ const PortfolioBanner = () => {
           </p>
           <div className="flex flex-row flex-wrap gap-[10px] md:gap-[32px]">
             <ArrowButton text="Lets Get Started" />
-            {/* <BorderButton text="Learn More" /> */}
           </div>
         </div>
-        <div className="lg:block hidden absolute top-[50%] -translate-y-1/2 right-0 rounded-full bg-primary shadow-2xl shadow-primary/20 size-[800px]"></div>
-        <div className="lg:block hidden absolute top-[50%] -translate-y-1/2 right-0 max-w-[800px]">
+        <div className="lg:block hidden absolute top-[50%] -translate-y-1/2 right-0 rounded-full bg-primary shadow-2xl shadow-primary/20 size-[600px]"></div>
+        <div className="lg:block hidden absolute top-[50%] -translate-y-1/2 right-0 max-w-[600px]">
           <img src={portfolioBanner} alt="" />
         </div>
       </div>
