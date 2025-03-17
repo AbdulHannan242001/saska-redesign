@@ -1,24 +1,25 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Lenis from '@studio-freight/lenis';
 import Layout from "./layout/layout";
 import Home from "./pages/Home/Home";
 import Service from "./pages/Service/Service";
 import Contact from "./pages/Contact/Contact";
 import Portfolio from "./pages/Portfolio/Portfolio";
+import { ToastContainer } from "react-toastify";
 
 function App() {
-  // Initialize Lenis with useEffect
+
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2, // Animation duration
-      easing: (t) => Math.min(1, 1.001 - Math.pow(1 - t, 2)), // Easing function
-      direction: 'vertical', // vertical or horizontal
-      gestureDirection: 'vertical', // for touch devices
-      smooth: true, // enable smooth scrolling
-      smoothTouch: false, // enable smooth scrolling for touch devices (optional)
-      touchMultiplier: 2, // sensitivity for touch
-      infinite: false, // infinite scrolling
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(1 - t, 2)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
     });
 
     function raf(time) {
@@ -28,7 +29,6 @@ function App() {
 
     requestAnimationFrame(raf);
 
-    // Cleanup
     return () => {
       lenis.destroy();
     };
@@ -42,6 +42,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Portfolio />} />
       </Route>
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
@@ -50,6 +51,9 @@ function AppWrapper() {
   return (
     <Router>
       <App />
+      <ToastContainer
+        position="top-left"
+      />
     </Router>
   );
 }

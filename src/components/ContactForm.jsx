@@ -1,11 +1,44 @@
-import React from "react";
-import contactBg from "../assets/images/contact-bg.png";
+import React, { useRef } from "react";
+
+import { toast } from "react-toastify";
+import emailjs from '@emailjs/browser';
+
 import ArrowButton from "./ArrowButton";
+
+import contactBg from "../assets/images/contact-bg.png";
+
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
   const navigate = useNavigate();
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_htvfes9',
+        'template_lihw05o',
+        form.current,
+        '8GvgYzGjkwINOneAo'
+      )
+      .then(
+        (result) => {
+          console.log(result.status);
+          if (result.status === 200) {
+            toast.success("Form submitted successfully!");
+          }
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error('Failed to submit the form. Please try again.');
+        }
+      );
+  };
+
   return (
     <div className="w-full relative h-fit">
       {/* Background Image Container */}
@@ -32,12 +65,12 @@ const ContactForm = () => {
               Every project we undertake is a testament to our dedication and
               expertise.
             </p>
-            <ArrowButton onClick={() => {navigate("/contact")}} text={"Get Consultation"} />
+            <ArrowButton onClick={() => { navigate("/contact") }} text={"Get Consultation"} />
           </div>
 
           {/* Right Section (Form) */}
           <div className="w-full md:w-6/12 text-white">
-            <form className="flex flex-col gap-3">
+            <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3">
               <div>
                 <label htmlFor="name" className="text-[16px] px-2">
                   Your Name *
@@ -45,6 +78,7 @@ const ContactForm = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -55,6 +89,7 @@ const ContactForm = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -65,6 +100,7 @@ const ContactForm = () => {
                 <input
                   type="text"
                   id="company"
+                  name="company"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -75,15 +111,17 @@ const ContactForm = () => {
                 <input
                   type="text"
                   id="phone"
+                  name="phone"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
               <div>
-                <label htmlFor="details" className="text-[16px] px-2">
+                <label htmlFor="message" className="text-[16px] px-2">
                   Project Details *
                 </label>
                 <textarea
-                  id="details"
+                  id="message"
+                  name="message"
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10 min-h-[20vh]"
                 />
               </div>
