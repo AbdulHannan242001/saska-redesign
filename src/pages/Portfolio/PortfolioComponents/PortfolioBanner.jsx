@@ -8,7 +8,7 @@ const PortfolioBanner = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-dark to-zinc-950"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between h-full">
-        <div className="flex flex-col gap-[15px] md:gap-[25px] w-full md:w-5/12">
+        <div className="flex flex-col gap-[15px] md:gap-[25px] w-full lg:w-5/12">
           <h1 className="text-2xl md:text-5xl font-bold text-primary">Innovate, Design, Deliver</h1>
           <p className="text-lg md:text-2xl">
             Empowering your business with tailored digital solutions. Together,
@@ -24,8 +24,8 @@ const PortfolioBanner = () => {
             {/* <BorderButton text="Learn More" /> */}
           </div>
         </div>
-        <div className="md:block hidden absolute top-[50%] -translate-y-1/2 right-0 rounded-full bg-primary shadow-2xl shadow-primary/20 size-[800px]"></div>
-        <div className="md:block hidden absolute top-[50%] -translate-y-1/2 right-0 max-w-[800px]">
+        <div className="lg:block hidden absolute top-[50%] -translate-y-1/2 right-0 rounded-full bg-primary shadow-2xl shadow-primary/20 size-[800px]"></div>
+        <div className="lg:block hidden absolute top-[50%] -translate-y-1/2 right-0 max-w-[800px]">
           <img src={portfolioBanner} alt="" />
         </div>
       </div>

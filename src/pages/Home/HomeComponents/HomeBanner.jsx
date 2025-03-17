@@ -35,7 +35,7 @@ const HomeBanner = () => {
       <div className="absolute size-[250px] right-[5%] top-[60%] blur-3xl bg-primary/40 rounded-full"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between">
-        <div className="flex flex-col gap-[20px] w-full md:max-w-[640px]">
+        <div className="flex flex-col gap-[20px] w-full lg:max-w-[640px]">
           <ChainedAvatar images={images} text={"100 + Client Reviews"} />
           <p className=" text-[40px] md:text-[64px] leading-[112.00000000000001%] font-light">
             Great <span className="font-bold">Product</span> is <br></br>
@@ -54,7 +54,7 @@ const HomeBanner = () => {
             <ArrowButton onClick={() => window.scrollTo(0, 700)} text={"Lets Get Started"} />
           </div>
         </div>
-        <div className="hidden md:flex flex-row items-center justify-between w-6/12">
+        <div className="hidden lg:flex flex-row items-center justify-between w-6/12">
             <div className="w-[395px] h-auto rounded-[13px] overflow-hidden">
                 <img src={banner1} alt="" className="h-auto w-full items-center object-cover" />
             </div>

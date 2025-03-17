@@ -46,7 +46,7 @@ const Services = () => {
           </p>
           <motion.div
             ref={ref}
-            className="flex flex-col md:flex-row gap-[56px] items-center mx-auto mt-[33px]  z-50"
+            className="flex flex-col flex-wrap md:flex-row gap-[56px] justify-center items-center mx-auto mt-[33px]  z-50"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}

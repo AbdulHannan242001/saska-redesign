@@ -30,8 +30,8 @@ const Projects2 = () => {
   return (
     <main className="w-full">
       <div ref={target} className="w-full h-[200vh]">
-        <div className="flex flex-col md:flex-row h-screen md:h-[calc(100vh-60px)] sticky top-15 md:top-15">
-          <div className="w-full md:w-8/12 relative flex flex-col justify-between items-center overflow-hidden md:h-full h-[40vh]">
+        <div className="flex flex-col lg:flex-row h-screen md:h-[calc(100vh-60px)] sticky top-15 md:top-15">
+          <div className="w-full lg:w-8/12 relative flex flex-col justify-between items-center overflow-hidden md:h-full h-[40vh]">
             <div className="absolute inset-0 h-full w-full">
               <img src={project2} alt="" className="h-full w-full" />
             </div>
@@ -66,7 +66,7 @@ const Projects2 = () => {
               />
             </motion.div>
           </div>
-          <div className="w-full md:w-4/12 p-[10px] md:p-[30px] bg-gradient-to-b from-dark to-zinc-950 flex flex-col justify-start md:justify-center relative overflow-hidden md:h-full h-[60vh]">
+          <div className="w-full lg:w-4/12 p-[10px] md:p-[30px] bg-gradient-to-b from-dark to-zinc-950 flex flex-col justify-start md:justify-center relative overflow-hidden md:h-full h-[60vh]">
             {/* <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary"></div> */}
             <motion.span
               className="text-primary text-sm md:text-lg font-black"

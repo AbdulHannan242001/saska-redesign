@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="max-w-[1600px] mx-auto flex flex-row items-center justify-between py-1">
         {/* Logo */}
         <Link to={"/"}>
-          <img src={logo} alt="Logo" className="h-12 w-auto md:h-[40px]" />
+          <img src={logo} alt="Logo" className="w-auto h-[40px]" />
         </Link>
 
         {/* Hamburger Button */}
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row gap-4 absolute md:static top-14 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none z-10`}
+          } md:flex flex-col md:flex-row gap-4 absolute md:static top-16 left-0 w-full md:w-auto bg-dark md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none z-10`}
         >
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;

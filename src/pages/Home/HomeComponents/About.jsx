@@ -20,7 +20,7 @@ const About = () => {
   ];
   return (
     <main className="max-w-[1600px] mx-auto px-[20px] py-[60px]">
-      <div className="w-full flex flex-col md:flex-row justify-between items-center">
+      <div className="w-full flex flex-col lg:flex-row justify-between items-center">
         <div className="relative md:px-[30px] md:w-fit">
           <img src={about} alt="" className="z-0" />
           <motion.div
@@ -66,7 +66,7 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-        <div className="w-full md:w-6/12 flex flex-col gap-[60px]">
+        <div className="w-full lg:w-6/12 flex flex-col gap-[60px]">
           <div className="flex flex-col gap-[20px]">
             <p className="font-semibold text-2xl text-primary-light">
               About Us

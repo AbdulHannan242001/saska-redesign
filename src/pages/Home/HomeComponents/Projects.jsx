@@ -32,7 +32,7 @@ const Projects = () => {
 
   return (
     <main className="w-full px-[20px] text-white">
-      <div className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row justify-between items-center relative min-h-[722px]">
+      <div className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row justify-between items-center relative min-h-[722px] overflow-x-hidden">
         <div className="absolute md:right-0 bottom-0 md:top-0 h-full w-auto z-10">
           <svg
             width="1145"
