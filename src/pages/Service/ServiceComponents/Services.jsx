@@ -14,12 +14,14 @@ const Services = () => {
 
   const services = [
     {
+      id: "design",
       title: "UI/UX Design",
       media: frontend,
       description:
         "We craft user experiences that are intuitive, engaging, and conversion-focused. Our design process is rooted in understanding user behavior, ensuring every click feels natural and every interaction adds value. Choose us for designs that elevate user satisfaction and drive results.",
     },
     {
+      id: "web",
       title: "Web Development",
       media: web,
       description:
@@ -27,24 +29,28 @@ const Services = () => {
     },
     
     {
+      id: "graphics",
       title: "Graphics Design",
       media: graphic,
       description:
         "We design compelling graphics that reflect your brand’s identity and capture attention. From logos to marketing materials, we ensure every design leaves a lasting impression—helping you stand out in a crowded market.",
     },
     {
+      id: "scripting",
       title: "Scripting & Automation",
       media: automation,
       description:
         "We automate your repetitive and time-consuming tasks, saving you valuable hours and reducing errors. Whether it’s data processing, system integration, or workflow automation, we design solutions that boost efficiency and let you focus on what truly matters.",
     },
     {
+      id: "software",
       title: "Software Development",
       media: software,
       description:
         "We develop scalable and tailored software solutions that solve real business challenges. Our approach ensures flexibility, efficiency, and growth potential—helping you stay ahead in a competitive market.",
     },
     {
+      id: "wordpress",
       title: "Wordpress & Ecommerce",
       media: wordpress,
       description:
@@ -136,6 +142,7 @@ const Services = () => {
                 title={service.title}
                 media={service.media}
                 description={service.description}
+                id={service.title}
               />
             </motion.div>
           ))}
