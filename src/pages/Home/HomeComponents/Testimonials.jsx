@@ -22,11 +22,11 @@ const Testimonials = () => {
             alt=""
             className="absolute top-0 left-[calc(0%+50px)] animate-bounce"
           />
-          <div className="w-full lg:w-5/12">
+          <div className="w-full lg:w-6/12">
             <Swiper />
           </div>
         </div>
-        <div className="hidden lg:block absolute top-0 right-0">
+        <div className="hidden lg:block absolute top-0 right-0 ">
           <img src={testimonial} alt="" />
         </div>
         <img

@@ -4,7 +4,7 @@ import process from "../../../assets/svg/process.svg";
 
 const Process = () => {
   return (
-    <main className="relative h-full lg:h-[200vh] w-full text-white px-[20px]">
+    <main className="relative h-full w-full text-white pb-[20px] px-[20px] border-b">
       <div className="absolute inset-0 h-full w-full -z-10">
         <img src={serviceBg} alt="" className="w-full h-full object-cover md:block hidden" />
       </div>

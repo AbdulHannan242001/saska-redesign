@@ -7,8 +7,8 @@ const Contact = () => {
   return (
     <main>
       <div className="bg-gradient-to-b from-dark to-zinc-950 w-full h-[90vh] px-[20px]">
-        <div className="h-[80vh] max-w-[1600px] mx-auto flex flex-row items-center justify-between text-white">
-          <div className="w-4/12 flex flex-col gap-[25px]">
+        <div className="h-full min-h-[80vh] max-w-[1600px] mx-auto flex flex-row items-center justify-between text-white">
+          <div className="w-5/12 flex flex-col gap-[25px]">
             <p className="font-bold text-5xl">
               Let’s Build Something Amazing Together!
             </p>
@@ -18,7 +18,7 @@ const Contact = () => {
               help. Let’s collaborate and create something impactful.
             </p>
           </div>
-          <div className="w-8/12">
+          <div className="w-7/12">
             <img src={contactBanner} alt="" />
           </div>
         </div>

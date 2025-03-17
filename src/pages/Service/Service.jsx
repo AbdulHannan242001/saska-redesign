@@ -5,7 +5,7 @@ import Process from './ServiceComponents/Process'
 
 const Service = () => {
   return (
-    <main>
+    <main className='flex flex-col gap-[60px]'>
       <ServiceBanner />
       <Services />
       <Process />
