@@ -1,16 +1,18 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Card from "./Card";
-import graphic from "../../../assets/svg/graphic.svg"
-import frontend from "../../../assets/svg/frontend.svg"
-import software from "../../../assets/svg/software.svg"
-import web from "../../../assets/svg/web.svg"
-import automation from "../../../assets/svg/automation.svg"
-import wordpress from "../../../assets/svg/wordpress.svg"
+import graphic from "../../../assets/svg/graphic.svg";
+import frontend from "../../../assets/svg/frontend.svg";
+import software from "../../../assets/svg/software.svg";
+import web from "../../../assets/svg/web.svg";
+import automation from "../../../assets/svg/automation.svg";
+import wordpress from "../../../assets/svg/wordpress.svg";
 import { motion, useInView } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const location = useLocation();
 
   const services = [
     {
@@ -27,7 +29,7 @@ const Services = () => {
       description:
         "We build responsive, high-performance websites using the latest technologies. From seamless navigation to optimized loading speeds, every line of code is crafted for maximum impact. Partner with us for web solutions that not only meet today's standards but are ready for tomorrow's demands.",
     },
-    
+
     {
       id: "graphics",
       title: "Graphics Design",
@@ -104,6 +106,28 @@ const Services = () => {
     },
   };
 
+  useEffect(() => {
+    const scrollTo = location.state?.scrollTo;
+    if (scrollTo) {
+      const scrollToSection = () => {
+        const element = document.getElementById(scrollTo);
+        if (element) {
+          const headerOffset = 80; // Adjust this based on your header height
+          const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      };
+
+      setTimeout(scrollToSection, 300); // Increased delay slightly for safety
+    }
+  }, [location]);
+
   return (
     <main className="w-full px-[20px]">
       <div className="max-w-[1600px] mx-auto relative h-full">
@@ -137,12 +161,11 @@ const Services = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {services.map((service, index) => (
-            <motion.div key={index} variants={cardVariants}>
+            <motion.div key={index} variants={cardVariants} id={service.id}>
               <Card
                 title={service.title}
                 media={service.media}
                 description={service.description}
-                id={service.title}
               />
             </motion.div>
           ))}

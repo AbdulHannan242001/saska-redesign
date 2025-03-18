@@ -6,17 +6,9 @@ import logo from "../assets/svg/logo.svg";
 
 const SimpleFooter = () => {
   const location = useLocation();
-
-  const handleScroll = (id) => {
-    if (location.pathname === "/services") {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
+  
   return (
-    <div className="bg-zinc-950 text-gray-200 py-8 px-[20px]">
+    <div className="bg-zinc-950 text-gray-200 py-4 px-[30px]">
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row w-full justify-start md:justify-between">
         {/* Logo & Socials */}
         <div className="flex flex-row items-center gap-4 mb-6 md:mb-0 md:flex-col md:justify-between">
@@ -59,7 +51,7 @@ const SimpleFooter = () => {
           <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
             Pages
           </p>
-          <ul className="flex flex-col items-center md:items-start gap-2 list-none">
+          <ul className="flex flex-col items-center md:items-start gap-0 list-none">
             <li className="text-sm md:text-base">
               <Link to="/">Home</Link>
             </li>
@@ -80,18 +72,46 @@ const SimpleFooter = () => {
           <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
             Services
           </p>
-          <ul className="flex flex-col items-center md:items-start gap-2 list-none">
+          <ul className="flex flex-col items-center md:items-start gap-0 list-none">
             <li className="text-sm md:text-base">
-              <Link to="/services" onClick={() => handleScroll('design')}>UI/UX and Graphic Designing</Link>
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "design" },
+                }}
+              >
+                UI/UX and Graphic Designing
+              </Link>
             </li>
             <li className="text-sm md:text-base">
-              <Link to="/services" onClick={() => handleScroll('web')}>Front-End Development</Link>
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "web" },
+                }}
+              >
+                Front-End Development
+              </Link>
             </li>
             <li className="text-sm md:text-base">
-              <Link to="/services" onClick={() => handleScroll('graphics')}>Back-End Development</Link>
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "web" },
+                }}
+              >
+                Back-End Development
+              </Link>
             </li>
             <li className="text-sm md:text-base">
-              <Link to="/services" onClick={() => handleScroll('scripting')}>Custom Software Development</Link>
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "software" },
+                }}
+              >
+                Custom Software Development
+              </Link>
             </li>
           </ul>
         </div>
