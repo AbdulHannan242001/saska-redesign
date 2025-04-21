@@ -16,8 +16,8 @@ const Portfolio = () => {
         <Projects1 />
         <Projects2 />
         <Projects3 />
-        <Projects4 />
         <Projects5 />
+        <Projects4 />
     </main>
   )
 }

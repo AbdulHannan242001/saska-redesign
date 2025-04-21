@@ -1,12 +1,14 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/svg/logo.svg";
 
 const SimpleFooter = () => {
+  const location = useLocation();
+  
   return (
-    <div className="bg-zinc-950 text-gray-200 py-8 px-[20px]">
+    <div className="bg-zinc-950 text-gray-200 py-4 px-[30px]">
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row w-full justify-start md:justify-between">
         {/* Logo & Socials */}
         <div className="flex flex-row items-center gap-4 mb-6 md:mb-0 md:flex-col md:justify-between">
@@ -45,48 +47,76 @@ const SimpleFooter = () => {
         </div>
 
         {/* Pages */}
-          <div className="flex flex-col">
-            <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
-              Pages
-            </p>
-            <ul className="flex flex-col items-center md:items-start gap-2 list-none">
-              <li className="text-sm md:text-base">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="text-sm md:text-base">
-                <Link to="/services">Services</Link>
-              </li>
-              <li className="text-sm md:text-base">
-                <Link to="/projects">Projects</Link>
-              </li>
-              <li className="text-sm md:text-base">
-                <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col">
+          <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
+            Pages
+          </p>
+          <ul className="flex flex-col items-center md:items-start gap-0 list-none">
+            <li className="text-sm md:text-base">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link to="/services">Services</Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
 
-          {/* Services */}
-          <div className="flex flex-col">
-            <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
-              Services
-            </p>
-            <ul className="flex flex-col items-center md:items-start gap-2 list-none">
-              <li className="text-sm md:text-base">
-                <Link to="/services">UI/UX and Graphic Designing</Link>
-              </li>
-              <li className="text-sm md:text-base">
-                <Link to="/services">Front-End Development</Link>
-              </li>
-              <li className="text-sm md:text-base">
-                <Link to="/services">Back-End Development</Link>
-              </li>
-              <li className="text-sm md:text-base">
-                <Link to="/services">Custom Software Development</Link>
-              </li>
-            </ul>
-          </div>
+        {/* Services */}
+        <div className="flex flex-col">
+          <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
+            Services
+          </p>
+          <ul className="flex flex-col items-center md:items-start gap-0 list-none">
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "design" },
+                }}
+              >
+                UI/UX and Graphic Designing
+              </Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "web" },
+                }}
+              >
+                Front-End Development
+              </Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "web" },
+                }}
+              >
+                Back-End Development
+              </Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "software" },
+                }}
+              >
+                Custom Software Development
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
   );
 };
 

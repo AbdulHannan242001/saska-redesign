@@ -1,50 +1,58 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Card from "./Card";
-import graphic from "../../../assets/svg/graphic.svg"
-import frontend from "../../../assets/svg/frontend.svg"
-import software from "../../../assets/svg/software.svg"
-import web from "../../../assets/svg/web.svg"
-import automation from "../../../assets/svg/automation.svg"
-import wordpress from "../../../assets/svg/wordpress.svg"
+import graphic from "../../../assets/svg/graphic.svg";
+import frontend from "../../../assets/svg/frontend.svg";
+import software from "../../../assets/svg/software.svg";
+import web from "../../../assets/svg/web.svg";
+import automation from "../../../assets/svg/automation.svg";
+import wordpress from "../../../assets/svg/wordpress.svg";
 import { motion, useInView } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const location = useLocation();
 
   const services = [
     {
+      id: "design",
       title: "UI/UX Design",
       media: frontend,
       description:
         "We craft user experiences that are intuitive, engaging, and conversion-focused. Our design process is rooted in understanding user behavior, ensuring every click feels natural and every interaction adds value. Choose us for designs that elevate user satisfaction and drive results.",
     },
     {
+      id: "web",
       title: "Web Development",
       media: web,
       description:
         "We build responsive, high-performance websites using the latest technologies. From seamless navigation to optimized loading speeds, every line of code is crafted for maximum impact. Partner with us for web solutions that not only meet today's standards but are ready for tomorrow's demands.",
     },
-    
+
     {
+      id: "graphics",
       title: "Graphics Design",
       media: graphic,
       description:
         "We design compelling graphics that reflect your brand’s identity and capture attention. From logos to marketing materials, we ensure every design leaves a lasting impression—helping you stand out in a crowded market.",
     },
     {
+      id: "scripting",
       title: "Scripting & Automation",
       media: automation,
       description:
         "We automate your repetitive and time-consuming tasks, saving you valuable hours and reducing errors. Whether it’s data processing, system integration, or workflow automation, we design solutions that boost efficiency and let you focus on what truly matters.",
     },
     {
+      id: "software",
       title: "Software Development",
       media: software,
       description:
         "We develop scalable and tailored software solutions that solve real business challenges. Our approach ensures flexibility, efficiency, and growth potential—helping you stay ahead in a competitive market.",
     },
     {
+      id: "wordpress",
       title: "Wordpress & Ecommerce",
       media: wordpress,
       description:
@@ -98,6 +106,28 @@ const Services = () => {
     },
   };
 
+  useEffect(() => {
+    const scrollTo = location.state?.scrollTo;
+    if (scrollTo) {
+      const scrollToSection = () => {
+        const element = document.getElementById(scrollTo);
+        if (element) {
+          const headerOffset = 80; // Adjust this based on your header height
+          const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      };
+
+      setTimeout(scrollToSection, 300); // Increased delay slightly for safety
+    }
+  }, [location]);
+
   return (
     <main className="w-full px-[20px]">
       <div className="max-w-[1600px] mx-auto relative h-full">
@@ -125,13 +155,13 @@ const Services = () => {
         </div>
         <motion.div
           ref={ref}
-          className="w-fit grid grid-cols-3 justify-between items-center gap-[20px] h-full pt-[60px] mx-auto"
+          className="w-full flex flex-wrap justify-center items-center gap-[20px] h-full pt-[60px] border-white "
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           {services.map((service, index) => (
-            <motion.div key={index} variants={cardVariants}>
+            <motion.div key={index} variants={cardVariants} id={service.id}>
               <Card
                 title={service.title}
                 media={service.media}
