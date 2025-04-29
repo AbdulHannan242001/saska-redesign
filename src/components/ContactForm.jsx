@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
@@ -12,10 +12,28 @@ import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: ''
+  })
 
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
+
+    setLoading(true);
+
+    const { name, email, company, phone, message } = formData;
+
+    if (!name || !email || !company || !phone || !message) {
+      toast.error("Please fill all fields");
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -30,13 +48,22 @@ const ContactForm = () => {
           if (result.status === 200) {
             toast.success("Form submitted successfully!");
           }
-          form.current.reset();
+          setFormData({
+            name: '',
+            email: '',
+            company: '',
+            phone: '',
+            message: ''
+          })
         },
         (error) => {
-          console.log(error.text);
+          console.error(error);
           toast.error('Failed to submit the form. Please try again.');
         }
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -79,6 +106,8 @@ const ContactForm = () => {
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -90,6 +119,8 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -101,6 +132,8 @@ const ContactForm = () => {
                   type="text"
                   id="company"
                   name="company"
+                  value={formData.company}
+                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -112,6 +145,8 @@ const ContactForm = () => {
                   type="text"
                   id="phone"
                   name="phone"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10"
                 />
               </div>
@@ -122,10 +157,12 @@ const ContactForm = () => {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="border border-white/30 rounded-xl w-full p-3 bg-white/10 min-h-[20vh]"
                 />
               </div>
-              <button className="border border-white/30 rounded-xl w-full p-1 bg-white/10 relative cursor-pointer">
+              <button disabled={loading} className="border border-white/30 rounded-xl w-full p-1 bg-white/10 relative cursor-pointer">
                 <div className="size-[55px] rounded-lg flex items-center justify-center bg-primary">
                   <FaArrowRight size={38} />
                 </div>
