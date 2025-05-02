@@ -58,12 +58,12 @@ const Projects = () => {
         </div>
         <div className="w-full md:w-6/12 flex flex-col gap-[30px] md:gap-[60px] z-50 pt-[30px] md:pt-[0px]">
           <div className="flex flex-col gap-[20px]">
-            <p className="font-semibold text-2xl text-primary-light">
+            <h1 className="font-semibold text-2xl text-primary-light">
               Projects
-            </p>
-            <p className="font-bold text-3xl max-w-xl">
+            </h1>
+            <h2 className="font-bold text-3xl max-w-xl">
               Our amazing project that has been completed
-            </p>
+            </h2>
             <p className="text-lg font-light max-w-2xl">
               Every project we undertake is a testament to our dedication and
               expertise. From small startups to large enterprises, our solutions

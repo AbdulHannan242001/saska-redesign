@@ -9,9 +9,9 @@ const Contact = () => {
       <div className="bg-gradient-to-b from-dark to-zinc-950 w-full h-[90vh] px-[20px]">
         <div className="h-full min-h-[80vh] max-w-[1600px] mx-auto flex flex-row items-center justify-between text-white">
           <div className="w-full md:w-5/12 flex flex-col gap-[25px]">
-            <p className="font-bold text-5xl">
+            <h1 className="font-bold text-5xl">
               Let’s Build Something Amazing Together!
-            </p>
+            </h1>
             <p>
               We’d love to hear from you! Whether you have a project idea, need
               expert advice, or just want to say hello, our team is ready to

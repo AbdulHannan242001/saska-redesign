@@ -11,9 +11,9 @@ const Testimonials = () => {
         <div className="flex flex-col gap-[10px] items-center justify-center">
           <p className="text-2xl font-medium text-primary">Cleints Feedback</p>
           <div>
-            <p className="text-center font-bold text-3xl">
+            <h2 className="text-center font-bold text-3xl">
               These People trusted us, be next....
-            </p>
+            </h2>
           </div>
         </div>
         <div className="w-full h-full lg:h-[450px] flex flex-row justify-start items-center relative">

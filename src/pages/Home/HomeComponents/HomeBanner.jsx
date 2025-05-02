@@ -37,10 +37,10 @@ const HomeBanner = () => {
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between">
         <div className="flex flex-col gap-[20px] w-full lg:max-w-[640px]">
           <ChainedAvatar images={images} text={"100 + Client Reviews"} />
-          <p className=" text-[40px] md:text-[64px] leading-[112.00000000000001%] font-light">
+          <h1 className=" text-[40px] md:text-[64px] leading-[112.00000000000001%] font-light">
             Great <span className="font-bold">Product</span> is <br></br>
             <span className="font-bold">built by great teams</span>
-          </p>
+          </h1>
           <p className="font-extralight leading-[144%] text-[16px] md:text-[20px]">
             We bring together our design skills and strategic thinking to craft
             experiences your customers will never forget.

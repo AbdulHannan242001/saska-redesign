@@ -71,9 +71,9 @@ const About = () => {
             <p className="font-semibold text-2xl text-primary-light">
               About Us
             </p>
-            <p className="font-bold text-3xl text-white">
+            <h2 className="font-bold text-3xl text-white">
               We have over 3+ years in the Tech Industry
-            </p>
+            </h2>
             <p className="text-lg font-light text-white">
               Our journey in the tech industry has been about delivering
               innovative solutions and empowering businesses to achieve their
@@ -88,9 +88,9 @@ const About = () => {
                 <span className="size-[30px] flex items-center justify-center rounded-full bg-primary-light text-white">
                   <TbArrowRight size={22} />
                 </span>
-                <p className="text-xl font-semibold uppercase text-white">
+                <h3 className="text-xl font-semibold uppercase text-white">
                   {text}
-                </p>
+                </h3>
               </div>
             ))}
           </div>

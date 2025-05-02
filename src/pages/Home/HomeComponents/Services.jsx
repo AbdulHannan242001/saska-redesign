@@ -40,10 +40,10 @@ const Services = () => {
     <main className="w-full relative px-[20px] pt-[60px] text-white">
       <div className="mx-auto max-w-[1600px]">
         <div className="w-full flex flex-col gap-[72px]">
-          <p className="text-4xl font-light text-center">
+          <h2 className="text-4xl font-light text-center">
             We provide All in-one <br />
             <span className="font-bold">Solutions for every IT job</span>
-          </p>
+          </h2>
           <motion.div
             ref={ref}
             className="flex flex-col flex-wrap md:flex-row gap-[56px] justify-center items-center mx-auto mt-[33px]  z-50"
@@ -56,9 +56,9 @@ const Services = () => {
               <Card icon={graphic}>
                 <div className="flex flex-col gap-[30px]">
                   <div className="flex flex-col gap-[20px]">
-                    <p className="font-semibold text-xl text-primary">
+                    <h2 className="font-semibold text-xl text-primary">
                       UI/UX and Graphic Designing
-                    </p>
+                    </h2>
                     <p className="text-[16px] font-light leading-[1.2rem]">
                       Transform your ideas into visually stunning designs and
                       user-friendly interfaces that captivate and engage your
@@ -74,9 +74,9 @@ const Services = () => {
               <Card icon={frontend}>
                 <div className="flex flex-col gap-[30px]">
                   <div className="flex flex-col gap-[20px]">
-                    <p className="font-semibold text-xl text-primary">
+                    <h2 className="font-semibold text-xl text-primary">
                       Front-End Development
-                    </p>
+                    </h2>
                     <p className="text-[16px] font-light leading-[1.2rem]">
                       Bring your designs to life with responsive, fast, and
                       modern front-end development tailored for exceptional user
@@ -92,9 +92,9 @@ const Services = () => {
               <Card icon={backend}>
                 <div className="flex flex-col gap-[30px]">
                   <div className="flex flex-col gap-[20px]">
-                    <p className="font-semibold text-xl text-primary">
+                    <h2 className="font-semibold text-xl text-primary">
                       Back-End Development
-                    </p>
+                    </h2>
                     <p className="text-[16px] font-light leading-[1.2rem]">
                       Develop robust, scalable, and secure back-end systems that
                       ensure seamless functionality and high performance for
@@ -110,9 +110,9 @@ const Services = () => {
               <Card icon={software}>
                 <div className="flex flex-col gap-[30px]">
                   <div className="flex flex-col gap-[20px]">
-                    <p className="font-semibold text-xl text-primary">
+                    <h2 className="font-semibold text-xl text-primary">
                       Custom Software Development
-                    </p>
+                    </h2>
                     <p className="text-[16px] font-light leading-[1.2rem]">
                       Get tailored software solutions built to address your
                       unique business needs and streamline your operations

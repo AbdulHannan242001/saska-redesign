@@ -13,10 +13,10 @@ const Process = () => {
           <div className="flex flex-col md:flex-row ">
             <div className="w-full md:w-6/12 flex flex-col gap-[13px]">
               <p className="font-semibold text-lg md:text-2xl pt-[20px]">How We Work</p>
-              <p className="font-black text-[60px] md:text-[82px] leading-[100%]">
+              <h2 className="font-black text-[60px] md:text-[82px] leading-[100%]">
                 Our Process <br />{" "}
                 <span className=" text-[40px] md:text-[64px]">Work Flow</span>{" "}
-              </p>
+              </h2>
               <p className="md:text-lg font-semibold">
                 At SASKA Solutions, we follow a structured and efficient process
                 to deliver high-quality digital solutions. Our workflow ensures
@@ -40,10 +40,10 @@ const Process = () => {
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Consultation</h1>
-                <h1 className="text-lg">
+                <h2 className="text-lg">
                   Every successful project starts with a clear understanding of
                   client requirements. <br /> During this phase:
-                </h1>
+                </h2>
                 <ul className="ml-6 list-disc">
                   <li>
                     We listen to your business goals, challenges, and vision.
@@ -70,10 +70,10 @@ const Process = () => {
                 <h1 className="text-[32px] font-bold">
                   Testing & Optimization
                 </h1>
-                <h1 className="text-lg">
+                <h2 className="text-lg">
                   Before launching, we conduct rigorous testing to ensure
                   flawless functionality. <br /> This includes:
-                </h1>
+                </h2>
                 <ul className="ml-6 list-disc">
                   <li>
                     Functional Testing – Ensuring every feature works as
@@ -105,10 +105,10 @@ const Process = () => {
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Planning & Research</h1>
-                <h1 className="text-lg">
+                <h2 className="text-lg">
                   After understanding your needs, we move to the planning stage,
                   where we:
-                </h1>
+                </h2>
                 <ul className="ml-6 list-disc">
                   <li>
                     Conduct thorough market research to analyze trends and user
@@ -139,10 +139,10 @@ const Process = () => {
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Deployment & Support</h1>
-                <h1 className="text-lg">
+                <h2 className="text-lg">
                   Once the project passes all tests, we proceed with the final
                   deployment. Our commitment doesn’t end here!
-                </h1>
+                </h2>
                 <ul className="ml-6 list-disc">
                   <li>
                     We deploy the project on the desired platform (web, mobile,
@@ -171,10 +171,10 @@ const Process = () => {
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Design & Development</h1>
-                <h1 className="text-lg">
+                <h2 className="text-lg">
                   Once the planning is finalized, our expert team starts
                   designing and developing the solution.
-                </h1>
+                </h2>
                 <ul className="ml-6 list-disc">
                   <li>
                     Our UI/UX designers create visually appealing and

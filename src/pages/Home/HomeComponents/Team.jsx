@@ -16,10 +16,10 @@ const Team = () => {
             Our team members
           </p>
           <div>
-            <p className="text-3xl font-light">Our certified experts will</p>
-            <p className="text-center font-bold text-3xl">
+            <h2 className="text-3xl font-light">Our certified experts will</h2>
+            <h2 className="text-center font-bold text-3xl">
               provide best solutions
-            </p>
+            </h2>
           </div>
         </div>
         <motion.div viewport={{ once: true }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-[30px] mx-auto z-50">

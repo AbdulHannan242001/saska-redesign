@@ -85,9 +85,9 @@ const ContactForm = () => {
             <p className="w-fit text-xl md:text-2xl font-bold p-3 bg-white/20 backdrop-blur-2xl rounded-xl">
               Contact Us
             </p>
-            <p className="text-2xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-2xl md:text-5xl font-bold leading-tight">
               Connect With Your Next Great Hire Today!
-            </p>
+            </h2>
             <p className="text-sm md:text-xl font-light">
               Every project we undertake is a testament to our dedication and
               expertise.
