@@ -6,6 +6,7 @@ import Projects2 from './PortfolioComponents/Projects2'
 import Projects3 from './PortfolioComponents/Projects3'
 import Projects4 from './PortfolioComponents/Projects4'
 import Projects5 from './PortfolioComponents/Projects5'
+import Projects6 from './PortfolioComponents/Projects6'
 
 
 const Portfolio = () => {
@@ -18,6 +19,7 @@ const Portfolio = () => {
         <Projects3 />
         <Projects5 />
         <Projects4 />
+        <Projects6 />
     </main>
   )
 }
