@@ -1,200 +1,101 @@
-import React from "react";
-
-const Section = ({ title, subtitle, children, id }) => {
-  return (
-    <section id={id} className="w-full px-[20px] py-[30px] md:py-[60px] text-white">
-      <div className="max-w-[1600px] mx-auto">
-        {subtitle ? (
-          <p className="text-primary font-semibold mb-2 md:mb-3">{subtitle}</p>
-        ) : null}
-        {title ? (
-          <h2 className="text-[32px] md:text-[48px] font-black leading-tight mb-4">
-            {title}
-          </h2>
-        ) : null}
-        <div className="prose prose-invert max-w-none">
-          {children}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const FeatureList = ({ items, columns = 2 }) => {
-  const gridCols = columns === 3 ? "md:grid-cols-3" : "md:grid-cols-2";
-  return (
-    <ul className={`grid grid-cols-1 ${gridCols} gap-3 md:gap-4 list-disc pl-5`}> 
-      {items.map((item, i) => (
-        <li key={i}>{item}</li>
-      ))}
-    </ul>
-  );
-};
+import { useInView, motion } from "framer-motion";
+import React, { useRef } from "react";
+import { FaServer } from "react-icons/fa";
+import { TbAutomation } from "react-icons/tb";
+import { useLocation } from "react-router-dom";
+import Card from "./Card";
+import { IoCloudOutline, IoShieldOutline } from "react-icons/io5";
 
 const ManagedIT = () => {
+  const services = [
+    {
+      id: "design",
+      title: "Systems Administration",
+      media: <FaServer />,
+      description:
+        "We provide comprehensive management of your IT systems to ensure smooth and secure operations. This includes day-to-day administration, user management, and support for critical applications. Our team manages both on-premises and cloud environments, giving you flexibility, stability, and peace of mind.",
+    },
+    {
+      id: "web",
+      title: "Cloud Managed Services",
+      media: <IoCloudOutline />,
+      description:
+        "The cloud is essential for modern business agility and scalability. Our managed cloud services provide businesses with secure migration, efficient infrastructure management, and long-term optimization. We specialize in Microsoft Azure solutions, giving organizations access to enterprise-grade cloud technologies.",
+    },
+
+    {
+      id: "graphics",
+      title: "Cybersecurity Services",
+      media: <IoShieldOutline />,
+      description:
+        "Cyber threats evolve every day, which is why security is at the core of everything we do. We provide layered defense strategies that safeguard your business from malware, phishing, and data breaches while maintaining compliance with industry regulations.",
+    },
+    {
+      id: "scripting",
+      title: "Desktop Support Excellence",
+      media: <TbAutomation />,
+      description:
+        "Employees rely on their workstations daily, which makes responsive desktop support a critical part of IT services. Our approach focuses on rapid problem resolution, user education, and proactive maintenance to keep teams productive and minimize downtime.",
+    },
+  ];
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each card
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 100 }, // Start 100px below
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <main className="w-full">
-      {/* Overview */}
-      <Section
-        id="managed-it-overview"
-        subtitle="Managed IT Services"
-        title="Reliable, proactive and cost‑effective technology for your business"
-      >
-        <p>
-          Our Managed IT Services are designed to provide businesses with reliable, proactive,
-          and cost‑effective technology solutions. By focusing on prevention rather than reaction,
-          we help organizations reduce downtime, improve productivity, and ensure long‑term IT stability.
-        </p>
-      </Section>
-
-      {/* Proactive vs Reactive */}
-      <Section
-        id="proactive-it"
-        title="Proactive IT Infrastructure Support Saves Money"
-      >
-        <p>
-          Many organizations operate with reactive IT models—support kicks in only when something breaks.
-          That approach often leads to unexpected costs and prolonged downtime. A proactive strategy focuses on
-          continuous monitoring, preventative maintenance, and early issue detection—reducing risk and total cost of ownership over time.
-        </p>
-      </Section>
-
-      {/* Systems Administration */}
-      <Section
-        id="systems-administration"
-        subtitle="Core Offering"
-        title="Systems Administration"
-      >
-        <p>
-          We manage both on‑premises and cloud environments to keep operations smooth, secure, and compliant.
-          From user administration to mission‑critical applications, we handle the day‑to‑day so your team can focus on growth.
-        </p>
-        <div className="mt-4">
-          <h3 className="text-xl md:text-2xl font-bold mb-3">Key Features</h3>
-          <FeatureList
-            columns={3}
-            items={[
-              "Infrastructure Help Desk – Centralized support for technical issues",
-              "Active Directory Administration – Users, groups, and access",
-              "24/7 System Monitoring – Servers, apps, and networks",
-              "Email/Exchange Administration – Secure and efficient mail",
-              "Business Application Support – Ongoing app management",
-              "Backup Services Monitoring – Verifying success and recoverability",
-              "Disaster Recovery Planning – Strategies to minimize downtime",
-              "Patch & Update Management – Security and performance",
-              "Performance Optimization – Prevent slowdowns and bottlenecks",
-              "Capacity Planning – Prepare resources for growth",
-              "Compliance & Audit Support – Meet regulatory standards",
-            ]}
-          />
-        </div>
-      </Section>
-
-      {/* Cloud Managed Services */}
-      <Section
-        id="cloud-managed-services"
-        subtitle="Microsoft Azure Specialists"
-        title="Cloud Managed Services"
-      >
-        <p>
-          We deliver secure migrations, efficient day‑to‑day operations, and continuous optimization in the cloud.
-          Our Azure expertise brings enterprise‑grade scalability, security, and cost control.
-        </p>
-        <div className="mt-4">
-          <h3 className="text-xl md:text-2xl font-bold mb-3">Key Features</h3>
-          <FeatureList
-            items={[
-              "On‑Premise to Cloud Migration",
-              "Cloud Infrastructure Management (VMs, storage, networking)",
-              "Cloud Backup & Security with compliance controls",
-              "Cloud Monitoring & Automation for performance and cost",
-              "Azure Active Directory (Azure AD) – SSO and secure authentication",
-              "Azure Virtual Desktop (AVD) – Secure remote work",
-              "Azure Security Center & Sentinel – Unified security and SIEM",
-              "Azure Backup & Site Recovery – Business continuity",
-              "Azure Cost Management – Usage insights and optimization",
-              "Hybrid Cloud Integration – Extend on‑prem into Azure",
-            ]}
-          />
-        </div>
-      </Section>
-
-      {/* Cybersecurity */}
-      <Section id="cybersecurity" title="Cybersecurity Services">
-        <p>
-          Security is embedded in everything we deliver. Our layered defenses protect against malware,
-          phishing, and data breaches while supporting compliance objectives.
-        </p>
-        <div className="mt-4">
-          <FeatureList
-            items={[
-              "Endpoint Detection & Response (EDR)",
-              "Remote Monitoring & Security Audits",
-              "Penetration Testing",
-              "Data Loss Prevention (DLP)",
-              "Phishing Simulations & Training",
-            ]}
-          />
-        </div>
-      </Section>
-
-      {/* Desktop Support */}
-      <Section
-        id="desktop-support"
-        title="Desktop Support Excellence"
-      >
-        <p>
-          Responsive end‑user support that prioritizes fast resolution, user education, and proactive maintenance
-          to keep teams productive.
-        </p>
-        <div className="mt-4">
-          <h3 className="text-xl md:text-2xl font-bold mb-3">Key Features of Effective User Support</h3>
-          <FeatureList
-            columns={3}
-            items={[
-              "Understanding User Needs",
-              "Fast Resolution of Common Issues",
-              "Technical Proficiency across OS, apps, and networks",
-              "Hardware Troubleshooting",
-              "Network Configuration",
-              "Proactive Maintenance (patches, updates, health checks)",
-              "User Feedback collection",
-              "Technology Awareness",
-              "Continuous Improvement via training",
-              "Preventive Problem Solving",
-            ]}
-          />
-        </div>
-      </Section>
-
-      {/* Tools & Technologies */}
-      <Section
-        id="tools"
-        title="Tools and Technologies for Support"
-      >
-        <FeatureList
-          items={[
-            "Remote Monitoring & Management (RMM)",
-            "Advanced Helpdesk Platforms",
-            "AI‑Powered Diagnostics",
-            "Centralized Knowledge Base",
-            "Security & Compliance Tooling",
-          ]}
-        />
-      </Section>
-
-      {/* Closing */}
-      <Section id="conclusion">
-        <p>
-          Our Managed IT Services keep your business secure, efficient, and ready for what’s next.
-          With a proactive, comprehensive approach, we minimize downtime, reduce costs, and let your team
-          focus on core business goals.
-        </p>
-      </Section>
+    <main className="w-full px-[20px]">
+      <div className="max-w-[1600px] mx-auto relative h-full">
+        <h3 className="text-3xl md:text-4xl font-semibold text-white">
+          Managed IT Services
+        </h3>
+        <motion.div
+          ref={ref}
+          className="w-full grid md:grid-cols-3 justify-start items-start gap-[20px] h-full pt-[60px] "
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              id={service.id}
+              className="h-full"
+            >
+              <Card
+                title={service.title}
+                icon={service.media}
+                description={service.description}
+                list={service.list}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </main>
   );
 };
 
 export default ManagedIT;
-
-

@@ -12,11 +12,17 @@ const ServiceBanner = () => {
             Our Services
           </h1>
           <p className="text-sm md:text-base">
-            At SASKA Solutions, we provide innovative and tailored solutions to
-            help businesses thrive in the digital landscape. Our expert team
-            specializes in design, development, and custom software solutions,
-            ensuring seamless digital experiences for our clients.
+            We are a team of experienced professionals dedicated to providing
+            exceptional services to our valued clients. From innovative design
+            to cutting-edge technology, we are here to help you achieve your
+            goals.
+            <br />
           </p>
+          <span className="font-bold pt-[20px]">
+            Web Design | UI/UX Design | Frontend Development | Backend
+            Development | Cyber Security | System Administration | Cloud
+            Computing
+          </span>
         </div>
         <div className="flex flex-row items-end w-full h-full">
           <img src={service} alt="" className=" ml-auto w-full h-full" />
