@@ -6,13 +6,19 @@ const Process = () => {
   return (
     <main className="relative h-full w-full text-white pb-[20px] px-[20px]">
       <div className="absolute inset-0 h-full w-full -z-10">
-        <img src={serviceBg} alt="" className="w-full h-full object-cover md:block hidden" />
+        <img
+          src={serviceBg}
+          alt=""
+          className="w-full h-full object-cover md:block hidden"
+        />
       </div>
       <div className="max-w-[1600px] mx-auto z-50 h-full">
         <div className="h-full items-center flex flex-col justify-center gap-[10px] md:gap-[60px]">
           <div className="flex flex-col md:flex-row ">
             <div className="w-full md:w-6/12 flex flex-col gap-[13px]">
-              <p className="font-semibold text-lg md:text-2xl pt-[20px]">How We Work</p>
+              <p className="font-semibold text-lg md:text-2xl pt-[20px]">
+                How We Work
+              </p>
               <h2 className="font-black text-[60px] md:text-[82px] leading-[100%]">
                 Our Process <br />{" "}
                 <span className=" text-[40px] md:text-[64px]">Work Flow</span>{" "}
@@ -29,7 +35,6 @@ const Process = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between w-full gap-[30px]">
-            
             <div className="flex flex-row gap-2">
               <div className="flex flex-col items-center">
                 <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
@@ -190,6 +195,136 @@ const Process = () => {
                   </li>
                   <li>
                     Security and performance are prioritized during development.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* IT Services Section */}
+        <div className="w-full mt-[60px]">
+          <h2 className="text-[32px] md:text-[48px] font-black text-center mb-8">
+            Our IT Services in Action
+          </h2>
+          <p className="text-primary font-semibold text-center mb-8">
+            How our Managed IT Services enhance every step of the process
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-between w-full gap-[30px]">
+            <div className="flex flex-row gap-2">
+              <div className="flex flex-col items-center">
+                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
+                  6
+                </span>
+                <div className="border-primary border-dashed h-full border-2"></div>
+              </div>
+              <div>
+                <h1 className="text-[32px] font-bold">
+                  Systems Administration
+                </h1>
+                <h2 className="text-lg">
+                  We provide comprehensive management of your IT systems to
+                  ensure smooth and secure operations.
+                </h2>
+                <ul className="ml-6 list-disc">
+                  <li>
+                    Day-to-day administration and user management for seamless
+                    operations.
+                  </li>
+                  <li>
+                    Support for critical applications in both on-premises and
+                    cloud environments.
+                  </li>
+                  <li>Ensuring flexibility, stability, and compliance.</li>
+                  <li>
+                    Proactive monitoring to prevent issues before they arise.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-2">
+              <div className="flex flex-col items-center">
+                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
+                  7
+                </span>
+                <div className="border-primary border-dashed h-full border-2"></div>
+              </div>
+              <div>
+                <h1 className="text-[32px] font-bold">
+                  Cloud Managed Services
+                </h1>
+                <h2 className="text-lg">
+                  The cloud is essential for modern business agility and
+                  scalability.
+                </h2>
+                <ul className="ml-6 list-disc">
+                  <li>
+                    Secure migration to cloud platforms like Microsoft Azure.
+                  </li>
+                  <li>
+                    Efficient infrastructure management for VMs, storage, and
+                    networking.
+                  </li>
+                  <li>
+                    Continuous optimization for cost control and performance.
+                  </li>
+                  <li>Enterprise-grade scalability and security solutions.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-2">
+              <div className="flex flex-col items-center">
+                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
+                  8
+                </span>
+                <div className="border-primary border-dashed h-full border-2"></div>
+              </div>
+              <div>
+                <h1 className="text-[32px] font-bold">
+                  Cybersecurity Services
+                </h1>
+                <h2 className="text-lg">
+                  Security is at the core of everything we do, protecting your
+                  business from evolving threats.
+                </h2>
+                <ul className="ml-6 list-disc">
+                  <li>
+                    Layered defenses against malware, phishing, and data
+                    breaches.
+                  </li>
+                  <li>Compliance with industry regulations and standards.</li>
+                  <li>Proactive security audits and penetration testing.</li>
+                  <li>Employee training to enhance security awareness.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-2">
+              <div className="flex flex-col items-center">
+                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
+                  9
+                </span>
+                <div className="border-primary border-dashed h-full border-2"></div>
+              </div>
+              <div>
+                <h1 className="text-[32px] font-bold">
+                  Desktop Support Excellence
+                </h1>
+                <h2 className="text-lg">
+                  Responsive desktop support keeps your teams productive with
+                  minimal downtime.
+                </h2>
+                <ul className="ml-6 list-disc">
+                  <li>
+                    Rapid problem resolution for hardware and software issues.
+                  </li>
+                  <li>
+                    User education to improve efficiency and reduce errors.
+                  </li>
+                  <li>Proactive maintenance to prevent workstation issues.</li>
+                  <li>
+                    Support for diverse operating systems and applications.
                   </li>
                 </ul>
               </div>
