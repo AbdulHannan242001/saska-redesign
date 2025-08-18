@@ -2,12 +2,14 @@ import React from 'react'
 import ServiceBanner from './ServiceComponents/ServiceBanner'
 import Services from './ServiceComponents/Services'
 import Process from './ServiceComponents/Process'
+import ManagedIT from './ServiceComponents/ManagedIT'
 
 const Service = () => {
   return (
     <main className='flex flex-col gap-[60px]'>
       <ServiceBanner />
       <Services />
+      <ManagedIT />
       <Process />
     </main>
   )
