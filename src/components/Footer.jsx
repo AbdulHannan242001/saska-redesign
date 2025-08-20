@@ -6,7 +6,7 @@ import logo from "../assets/svg/logo.svg";
 
 const SimpleFooter = () => {
   const location = useLocation();
-  
+
   return (
     <div className="bg-zinc-950 text-gray-200 py-4 px-[30px]">
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row w-full justify-start md:justify-between">
@@ -47,11 +47,11 @@ const SimpleFooter = () => {
         </div>
 
         {/* Pages */}
-        <div className="flex flex-col">
+        <div className="flex flex-col pb-[20px]">
           <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
             Pages
           </p>
-          <ul className="flex flex-col items-center md:items-start gap-0 list-none">
+          <ul className="flex flex-col items-start gap-0 list-none">
             <li className="text-sm md:text-base">
               <Link to="/">Home</Link>
             </li>
@@ -72,7 +72,7 @@ const SimpleFooter = () => {
           <p className="font-semibold text-white uppercase text-sm md:text-base mb-2">
             Services
           </p>
-          <ul className="flex flex-col items-center md:items-start gap-0 list-none">
+          <ul className="flex flex-col items-start gap-0 list-none">
             <li className="text-sm md:text-base">
               <Link
                 to={{
@@ -111,6 +111,46 @@ const SimpleFooter = () => {
                 }}
               >
                 Custom Software Development
+              </Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "software" },
+                }}
+              >
+                System Administration
+              </Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "software" },
+                }}
+              >
+                Cloud Management
+              </Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "software" },
+                }}
+              >
+                Cyber Security
+              </Link>
+            </li>
+            <li className="text-sm md:text-base">
+              <Link
+                to={{
+                  pathname: "/services",
+                  state: { scrollTo: "software" },
+                }}
+              >
+                Desktop Support
               </Link>
             </li>
           </ul>

@@ -67,6 +67,74 @@ const Process = () => {
               <div className="flex flex-col items-center">
                 <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
                   {" "}
+                  2{" "}
+                </span>
+                <div className="border-primary border-dashed h-full border-2"></div>
+              </div>
+              <div>
+                <h1 className="text-[32px] font-bold">Planning & Research</h1>
+                <h2 className="text-lg">
+                  After understanding your needs, we move to the planning stage,
+                  where we:
+                </h2>
+                <ul className="ml-6 list-disc">
+                  <li>
+                    Conduct thorough market research to analyze trends and user
+                    expectations.
+                  </li>
+                  <li>
+                    Create a structured project roadmap to ensure smooth
+                    execution.
+                  </li>
+                  <li>
+                    Develop wireframes, user flows, and prototypes for design
+                    clarity.
+                  </li>
+                  <li>
+                    Choose the best tools and technologies for development.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-2">
+              <div className="flex flex-col items-center">
+                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
+                  {" "}
+                  3{" "}
+                </span>
+                <div className="border-primary border-dashed h-full border-2"></div>
+              </div>
+              <div>
+                <h1 className="text-[32px] font-bold">Design & Development</h1>
+                <h2 className="text-lg">
+                  Once the planning is finalized, our expert team starts
+                  designing and developing the solution.
+                </h2>
+                <ul className="ml-6 list-disc">
+                  <li>
+                    Our UI/UX designers create visually appealing and
+                    user-friendly interfaces.
+                  </li>
+                  <li>
+                    The development team writes clean, optimized, and scalable
+                    code.
+                  </li>
+                  <li>
+                    We focus on mobile responsiveness, fast loading times, and
+                    intuitive navigation.
+                  </li>
+                  <li>
+                    Security and performance are prioritized during development.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-2">
+              <div className="flex flex-col items-center">
+                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
+                  {" "}
                   4{" "}
                 </span>
                 <div className="border-primary border-dashed h-full border-2"></div>
@@ -104,40 +172,6 @@ const Process = () => {
               <div className="flex flex-col items-center">
                 <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
                   {" "}
-                  2{" "}
-                </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
-              </div>
-              <div>
-                <h1 className="text-[32px] font-bold">Planning & Research</h1>
-                <h2 className="text-lg">
-                  After understanding your needs, we move to the planning stage,
-                  where we:
-                </h2>
-                <ul className="ml-6 list-disc">
-                  <li>
-                    Conduct thorough market research to analyze trends and user
-                    expectations.
-                  </li>
-                  <li>
-                    Create a structured project roadmap to ensure smooth
-                    execution.
-                  </li>
-                  <li>
-                    Develop wireframes, user flows, and prototypes for design
-                    clarity.
-                  </li>
-                  <li>
-                    Choose the best tools and technologies for development.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="flex flex-row gap-2">
-              <div className="flex flex-col items-center">
-                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
-                  {" "}
                   5{" "}
                 </span>
                 <div className="border-primary border-dashed h-full border-2"></div>
@@ -161,40 +195,6 @@ const Process = () => {
                   <li>
                     We continuously monitor and optimize the solution for future
                     improvements.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="flex flex-row gap-2">
-              <div className="flex flex-col items-center">
-                <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
-                  {" "}
-                  3{" "}
-                </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
-              </div>
-              <div>
-                <h1 className="text-[32px] font-bold">Design & Development</h1>
-                <h2 className="text-lg">
-                  Once the planning is finalized, our expert team starts
-                  designing and developing the solution.
-                </h2>
-                <ul className="ml-6 list-disc">
-                  <li>
-                    Our UI/UX designers create visually appealing and
-                    user-friendly interfaces.
-                  </li>
-                  <li>
-                    The development team writes clean, optimized, and scalable
-                    code.
-                  </li>
-                  <li>
-                    We focus on mobile responsiveness, fast loading times, and
-                    intuitive navigation.
-                  </li>
-                  <li>
-                    Security and performance are prioritized during development.
                   </li>
                 </ul>
               </div>
