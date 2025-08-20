@@ -15,7 +15,7 @@ const SimpleFooter = () => {
           <div className="text-center">
             <img src={logo} alt="Logo" className="h-16 md:h-[80px] w-auto" />
             <p className="text-xs md:text-sm font-semibold text-white">
-              Your Digital Path to Success
+              Managed IT and Custom Software Solutions
             </p>
           </div>
           <div className="flex gap-3 mt-4 md:mt-0">

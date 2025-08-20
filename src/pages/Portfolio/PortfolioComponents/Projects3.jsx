@@ -1,120 +1,109 @@
 import React, { useRef } from "react";
-import { useScroll, useTransform, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import bethmar1 from "../../../assets/images/bethmar1.png";
 import bethmar2 from "../../../assets/images/bethmar2.png";
-import project3 from "../../../assets/images/project3.jpg";
-import ArrowButton from "../../../components/ArrowButton";
 
 const Projects3 = () => {
   const target = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: target,
-    offset: ["start end", "end start"],
-  });
-  const isInView = useInView(target, { once: false, amount: 0.5 });
+  const isInView = useInView(target, { once: true, amount: 0.3 });
 
   const textVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: (custom) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, delay: custom * 0.5 },
+      transition: { duration: 0.5, delay: custom * 0.2 },
     }),
   };
 
-  const y1 = useTransform(scrollYProgress, [0, 0.7], [200, -200]);
-  const y2 = useTransform(scrollYProgress, [0, 0.7], [-300, 200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [0, 1]);
-
   return (
-    <main className="w-full">
-      <div ref={target} className="w-full h-[200vh]">
-        <div className="flex flex-col lg:flex-row h-screen md:h-[calc(100vh-60px)] sticky top-15 md:top-15">
-          <div className="w-full lg:w-5/12 p-[10px] md:p-[30px] bg-gradient-to-b from-dark to-zinc-950 flex flex-col justify-start md:justify-center relative overflow-hidden md:h-full h-[50vh]">
-            {/* <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary"></div> */}
-            <motion.span
-              className="text-primary text-sm md:text-lg font-black"
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={0.25}
-            >
-              BETHMAR LIMITED
-            </motion.span>
-            <motion.p
-              className="text-base font-light text-white tracking-tighter pb-[10px] md:pb-[20px]"
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={0.5}
-            >
-              Building an Online Presence for Industry Leaders.
-            </motion.p>
-            <motion.p
-              className="text-sm md:text-lg text-gray-200 font-medium max-w-lg tracking-tight pb-[10px] md:pb-[25px]"
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={1}
-            >
-              Bethmar Ltd. approached us to establish their first digital
-              footprint—showcasing their expertise in civil, power, and telecom
-              infrastructure. Understanding their need for professionalism and
-              simplicity, we developed a sleek single-page website. The design
-              highlights their core services with interactive elements and
-              smooth animations, ensuring a modern and trustworthy online
-              presence. The result? A digital platform that positions Bethmar as
-              a leading player in their industry.
-            </motion.p>
-            <motion.div
-              className=""
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={1.5}
-            >
-              <a href="https://bethmar.co.uk" target="_blank" className="text-white hover:border-b-1 border-white transition-all duration-300 ease-in">Visit Site</a>
-            </motion.div>
-          </div>
-          <div className="w-full lg:w-7/12 relative flex flex-col justify-between items-center overflow-hidden md:h-full h-[50vh]">
-            <div className="absolute inset-0 h-full w-full">
-              <img src={project3} alt="" className="h-full w-full" />
-            </div>
-            <motion.div
-              style={{
-                y: y2,
-                opacity: opacity,
-              }}
-              className="h-[50%] w-fit ml-auto"
-              transition={{
-                duration: 0.8,
-                ease: "easeOut",
-              }}
-            >
-              <img
-                src={bethmar1}
-                alt="Project 1"
-                className="h-full w-full object-cover p-[30px]"
-              />
-            </motion.div>
-            <motion.div
-              style={{
-                y: y1,
-                opacity: opacity,
-              }}
-              className="h-[50%] w-fit mr-auto"
-            >
-              <img
-                src={bethmar2}
-                alt="Project 1"
-                className="h-full w-full object-cover p-[30px]"
-              />
-            </motion.div>
-          </div>
+    <section
+      ref={target}
+      className="w-full py-[50px] md:py-[100px] bg-gradient-to-t from-dark to-zinc-950"
+    >
+      <div className="max-w-[1600px] mx-auto px-[20px] flex flex-col-reverse lg:flex-row items-center gap-[30px] md:gap-[50px]">
+        <div className="w-full lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-[20px] relative">
+          <motion.img
+            src={bethmar1}
+            alt="Bethmar Screenshot 1"
+            className="w-full h-auto object-cover shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          />
+          <motion.img
+            src={bethmar2}
+            alt="Bethmar Screenshot 2"
+            className="w-full h-auto object-cover shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          />
+        </div>
+        <div className="w-full lg:w-5/12 flex flex-col gap-[20px]">
+          <motion.span
+            className="text-primary text-xl md:text-lg font-black"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={0}
+          >
+            BETHMAR LIMITED
+          </motion.span>
+          <motion.h3
+            className="text-xl md:text-2xl font-bold text-white"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={1}
+          >
+            Problem
+          </motion.h3>
+          <motion.p
+            className="text-sm md:text-base text-gray-200 font-medium tracking-tight"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={2}
+          >
+            The client wanted to establish their first digital footprint to
+            showcase expertise in civil, power, and telecom infrastructure,
+            requiring a professional and simple platform.
+          </motion.p>
+          <motion.h3
+            className="text-xl md:text-2xl font-bold text-white"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={3}
+          >
+            Solution
+          </motion.h3>
+          <motion.p
+            className="text-sm md:text-base text-gray-200 font-medium tracking-tight"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={4}
+          >
+            We developed a sleek single-page website with interactive elements
+            and smooth animations, highlighting core services to position
+            Bethmar as a leading player in their industry.
+          </motion.p>
+          <motion.a
+            href="https://bethmar.co.uk"
+            target="_blank"
+            className="text-white hover:border-b border-white transition-all duration-300 ease-in inline-block w-fit"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={5}
+          >
+            Visit Site
+          </motion.a>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

@@ -1,125 +1,110 @@
 import React, { useRef } from "react";
-import { useScroll, useTransform, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import sqcommercial from "../../../assets/images/sqcommercial.png";
 import sqcommercial1 from "../../../assets/images/sqcommercial1.png";
 import project2 from "../../../assets/images/project2.jpg";
-import ArrowButton from "../../../components/ArrowButton";
 
 const Projects2 = () => {
   const target = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: target,
-    offset: ["start end", "end start"],
-  });
-  const isInView = useInView(target, { once: false, amount: 0.5 });
+  const isInView = useInView(target, { once: true, amount: 0.3 });
 
   const textVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: (custom) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, delay: custom * 0.5 },
+      transition: { duration: 0.5, delay: custom * 0.2 },
     }),
   };
 
-  const x1 = useTransform(scrollYProgress, [0, 0.8], [400, -100]);
-  const x2 = useTransform(scrollYProgress, [0, 0.8], [-500, 100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [0.3, 1]);
-
   return (
-    <main className="w-full">
-      <div ref={target} className="w-full h-[200vh]">
-        <div className="flex flex-col lg:flex-row h-screen md:h-[calc(100vh-60px)] sticky top-15 md:top-15">
-          <div className="w-full lg:w-7/12 relative flex flex-col justify-between items-center overflow-hidden md:h-full h-[40vh]">
-            <div className="absolute inset-0 h-full w-full">
-              <img src={project2} alt="" className="h-full w-full" />
-            </div>
-            <motion.div
-              style={{
-                x: x2,
-                opacity: opacity,
-              }}
-              className="h-[50%] w-fit ml-auto"
-              transition={{
-                duration: 0.8,
-                ease: "easeOut",
-              }}
-            >
-              <img
-                src={sqcommercial}
-                alt="Project 1"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
-            <motion.div
-              style={{
-                x: x1,
-                opacity: opacity,
-              }}
-              className="h-[50%] w-fit mr-auto"
-            >
-              <img
-                src={sqcommercial1}
-                alt="Project 1"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
-          </div>
-          <div className="w-full lg:w-5/12 p-[10px] md:p-[30px] bg-gradient-to-b from-dark to-zinc-950 flex flex-col justify-start md:justify-center relative overflow-hidden md:h-full h-[60vh]">
-            {/* <div className="absolute size-[150px] md:size-[350px] rounded-full top-[-30%] left-[-25%] blur-3xl bg-primary"></div> */}
-            <motion.span
-              className="text-primary text-sm md:text-lg font-black"
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={0.25}
-            >
-              SQ COMMERCIALS
-            </motion.span>
-            <motion.p
-              className="text-base font-light text-white tracking-tighter pb-[10px] md:pb-[20px]"
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={0.5}
-            >
-              Crafting a Professional Platform for Industry Excellence.
-            </motion.p>
-            <motion.p
-              className="text-sm md:text-lg text-gray-200 font-medium max-w-lg tracking-tight pb-[10px] md:pb-[25px]"
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={1}
-            >
-              SQ Commercial reached out to elevate their brand with a clean and
-              professional website. They needed a platform that not only
-              showcased their civil infrastructure and telecom solutions but
-              also reflected their commitment to quality. We designed a modern,
-              user-friendly site that clearly communicates their services while
-              offering a smooth browsing experience. The result is a website
-              that builds trust and strengthens their professional image.
-            </motion.p>
-            <motion.div
-              className=""
-              variants={textVariant}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={1.5}
-            >
-              <a
-                href="https://www.sqcommercial.co.uk"
-                target="_blank"
-                className="text-white hover:border-b-1 border-white transition-all duration-300 ease-in"
-              >
-                Visit Site
-              </a>
-            </motion.div>
-          </div>
+    <section
+      ref={target}
+      className="w-full py-[50px] md:py-[100px] bg-gradient-to-b from-dark to-zinc-950"
+    >
+      <div className="max-w-[1600px] mx-auto px-[20px] flex flex-col-reverse lg:flex-row-reverse items-center gap-[30px] md:gap-[50px]">
+        <div className="w-full lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-[20px] relative">
+          <motion.img
+            src={sqcommercial}
+            alt="SQ Commercials Screenshot 1"
+            className="w-full h-auto object-cover shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          />
+          <motion.img
+            src={sqcommercial1}
+            alt="SQ Commercials Screenshot 2"
+            className="w-full h-auto object-cover shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          />
+        </div>
+        <div className="w-full lg:w-4/12 flex flex-col gap-[20px]">
+          <motion.span
+            className="text-primary text-xl md:text-lg font-black"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={0}
+          >
+            SQ COMMERCIALS
+          </motion.span>
+          <motion.h3
+            className="text-xl md:text-2xl font-bold text-white"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={1}
+          >
+            Problem
+          </motion.h3>
+          <motion.p
+            className="text-sm md:text-base text-gray-200 font-medium tracking-tight"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={2}
+          >
+            The client needed to elevate their brand with a professional
+            platform that showcased their civil infrastructure and telecom
+            solutions while reflecting their commitment to quality.
+          </motion.p>
+          <motion.h3
+            className="text-xl md:text-2xl font-bold text-white"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={3}
+          >
+            Solution
+          </motion.h3>
+          <motion.p
+            className="text-sm md:text-base text-gray-200 font-medium tracking-tight"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={4}
+          >
+            We designed a modern, user-friendly website that clearly
+            communicates their services, offering a smooth browsing experience
+            to build trust and strengthen their professional image.
+          </motion.p>
+          <motion.a
+            href="https://www.sqcommercial.co.uk"
+            target="_blank"
+            className="text-white hover:border-b border-white transition-all duration-300 ease-in inline-block w-fit"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={5}
+          >
+            Visit Site
+          </motion.a>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

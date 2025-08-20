@@ -4,7 +4,7 @@ import ArrowButton from "../../../components/ArrowButton";
 
 const PortfolioBanner = () => {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center text-white px-[20px] overflow-hidden">
+    <div className="relative w-full h-fit md:h-screen flex items-center justify-center text-white md:pt-0 pt-[30px] px-[20px] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-dark to-zinc-950"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto flex flex-row items-center justify-between h-full">
