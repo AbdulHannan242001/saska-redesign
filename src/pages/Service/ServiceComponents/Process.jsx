@@ -41,7 +41,6 @@ const Process = () => {
                   {" "}
                   1{" "}
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Consultation</h1>
@@ -69,7 +68,6 @@ const Process = () => {
                   {" "}
                   2{" "}
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Planning & Research</h1>
@@ -103,7 +101,6 @@ const Process = () => {
                   {" "}
                   3{" "}
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Design & Development</h1>
@@ -137,7 +134,6 @@ const Process = () => {
                   {" "}
                   4{" "}
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">
@@ -174,7 +170,6 @@ const Process = () => {
                   {" "}
                   5{" "}
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">Deployment & Support</h1>
@@ -215,7 +210,6 @@ const Process = () => {
                 <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
                   6
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">
@@ -247,7 +241,6 @@ const Process = () => {
                 <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
                   7
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">
@@ -278,7 +271,6 @@ const Process = () => {
                 <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
                   8
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">
@@ -305,7 +297,6 @@ const Process = () => {
                 <span className="size-[54px] border-4 border-primary rounded-full flex items-center justify-center text-[32px] font-black text-primary">
                   9
                 </span>
-                <div className="border-primary border-dashed h-full border-2"></div>
               </div>
               <div>
                 <h1 className="text-[32px] font-bold">
