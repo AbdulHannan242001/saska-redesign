@@ -4,6 +4,9 @@ import Pill from "./Pill";
 import ArrowButton from "../../../components/ArrowButton";
 import banner1 from "../../../assets/images/banner1.png";
 import banner2 from "../../../assets/images/banner2.png";
+import freelancer from "../../../assets/images/freelancer.png";
+import fiverr from "../../../assets/images/fiverr.png";
+import upwork from "../../../assets/images/upwork.png";
 
 const HomeBanner = () => {
   const services = [
@@ -17,17 +20,17 @@ const HomeBanner = () => {
 
   const icons = [
     {
-      src: "/src/assets/images/freelancer.png",
+      src: freelancer,
       alt: "Freelancer",
       href: "https://www.freelancer.com/u/saskasolution",
     },
     {
-      src: "/src/assets/images/upwork.png",
+      src: upwork,
       alt: "Upwork",
       href: "https://www.upwork.com/freelancers/~019f9deef666453193",
     },
     {
-      src: "/src/assets/images/fiverr.png",
+      src: fiverr,
       alt: "Fiverr",
       href: "https://www.fiverr.com/saska_solutions/",
     },
@@ -46,6 +49,7 @@ const HomeBanner = () => {
               <motion.a
                 key={index}
                 href={icon.href}
+                target="_blank"
                 className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md"
                 whileHover={{
                   scale: 1.1,
